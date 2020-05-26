@@ -1,0 +1,94 @@
+{
+    "language": "en",
+    "designPath": "/libs/settings/wcm/designs/default",
+    "templateName": "spa-app-template",
+    "cssClassNames": "spa page basicpage",
+    "title": "en",
+    ":items": {},
+    ":itemsOrder": [],
+    ":hierarchyType": "page",
+    ":path": "/content/wknd-spa-react/us/en",
+    ":children": {
+        "/content/wknd-spa-react/us/en/home": {
+            "language": "en",
+            "designPath": "/libs/settings/wcm/designs/default",
+            "templateName": "spa-page-template",
+            "cssClassNames": "spa page basicpage",
+            "title": "WKND SPA React Home Page",
+            "lastModifiedDate": 1588717986180,
+            ":items": {
+                "root": {
+                    "columnClassNames": {
+                        "responsivegrid": "aem-GridColumn aem-GridColumn--default--12"
+                    },
+                    "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+                    "columnCount": 12,
+                    "allowedComponents": {
+                        "applicable": false,
+                        "components": [
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wcm/foundation/components/responsivegrid",
+                                "title": "Layout Container"
+                            },
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wknd-spa-react/components/text",
+                                "title": "Text"
+                            }
+                        ]
+                    },
+                    ":items": {
+                        "responsivegrid": {
+                            "columnClassNames": {
+                                "text": "aem-GridColumn aem-GridColumn--default--12",
+                                "text_23828680": "aem-GridColumn aem-GridColumn--default--12"
+                            },
+                            "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+                            "columnCount": 12,
+                            "allowedComponents": {
+                                "applicable": false,
+                                "components": [
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/jcr:content/root/responsivegrid/wcm/foundation/components/responsivegrid",
+                                        "title": "Layout Container"
+                                    },
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/jcr:content/root/responsivegrid/wknd-spa-react/components/text",
+                                        "title": "Text"
+                                    }
+                                ]
+                            },
+                            ":items": {
+                                "text": {
+                                    "text": "<p>Hello World!</p>",
+                                    "richText": true,
+                                    ":type": "wknd-spa-react/components/text"
+                                },
+                                "text_23828680": {
+                                    "text": "<p>Mock Model JSON!</p>\r\n",
+                                    "richText": true,
+                                    ":type": "wknd-spa-react/components/text"
+                                }
+                            },
+                            ":itemsOrder": [
+                                "text",
+                                "text_23828680"
+                            ],
+                            ":type": "wcm/foundation/components/responsivegrid"
+                        }
+                    },
+                    ":itemsOrder": [
+                        "responsivegrid"
+                    ],
+                    ":type": "wcm/foundation/components/responsivegrid"
+                }
+            },
+            ":itemsOrder": [
+                "root"
+            ],
+            ":hierarchyType": "page",
+            ":path": "/content/wknd-spa-react/us/en/home",
+            ":type": "wknd-spa-react/components/page"
+        }
+    },
+    ":type": "wknd-spa-react/components/spa"
+}
