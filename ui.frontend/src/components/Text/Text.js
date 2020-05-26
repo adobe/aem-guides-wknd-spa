@@ -19,7 +19,7 @@ import DOMPurify from 'dompurify';
 import React, { Component } from 'react';
 import extractModelId from '../../utils/extract-model-id';
 
-require('./Text.css');
+require('./Text.scss');
 
 /**
  * Default Edit configuration for the Text component that interact with the Core Text component and sub-types

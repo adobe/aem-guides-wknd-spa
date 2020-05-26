@@ -12,17 +12,32 @@ $white:                  #FFFFFF;
 $yellow:                 #FFEA00;
 $blue:                   #0045FF;
 
-
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       "Asar",Georgia, "Times New Roman", Times, serif;
 $font-family-base:        $font-family-sans-serif;
-$font-size-base:          18px;
 
-$line-height-base:        1.5;
+$font-size-xsmall:		  12px;
+$font-size-small:         14px;
+$font-size-medium:		  16px;
+$font-size-base:          18px;
+$font-size-large:         24px;
+$font-size-xlarge:        48px;
+
+$font-size-h1:            40px;
+$font-size-h2:            36px; 
+$font-size-h3:            24px; 
+$font-size-h4:            16px; 
+$font-size-h5:            14px;
+$font-size-h6:            10px; 
+
+$font-weight-normal:     normal;
+$font-weight-bold:       600;
+
+$line-height-base:        1.1;
 $line-height-computed:    floor(($font-size-base * $line-height-base));
 
 // Functional Colors
@@ -36,4 +51,4 @@ $link-color:                $blue;
 $max-width: 1024px;
 
 // Spacing
-$gutter-padding: 12px;
+$gutter-padding: 12px; 
