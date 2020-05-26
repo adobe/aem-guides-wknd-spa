@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {MapTo} from '@adobe/cq-react-editable-components';
-
+import {Link} from "react-router-dom";
 require('./Navigation.scss');
 
 const NavigationEditConfig = {
@@ -19,15 +19,35 @@ export default class Navigation extends Component {
    baseCss = 'Navigation';
 
    renderGroupNav(children) {
-       //TODO: implement renderGroupNav
+
+        if(children === null || children.length < 1 ) {
+            return null;
+        }
+        return (<ul className={this.baseCss + '__group'}>
+                    {children.map(
+                        (item,index) => { return this.renderNavItem(item,index)}
+                    )}
+                </ul>
+        );
    }
 
    renderNavItem(item, index) {
-      //TODO: implement renderNavItem
+      const cssClass = this.baseCss + '__item ' + 
+                         this.baseCss + '__item--level-' + item.level + ' ' +
+                         (item.active ? ' ' + this.baseCss + '__item--active' : '');
+        return (
+            <li key={this.baseCss + '__item-' + index} className={cssClass}>
+                    { this.renderLink(item) }
+                    { this.renderGroupNav(item.children) }
+            </li>
+        );
    }
 
    renderLink(item){
-      //TODO: implement renderLink
+    return (
+        <Link to={item.url} title={item.title} aria-current={item.active && 'page'}
+           className={this.baseCss + '__item-link'}>{item.title}</Link>
+    );
    }
 
     render() {

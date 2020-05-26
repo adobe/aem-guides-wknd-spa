@@ -465,13 +465,31 @@
             </page>
             <spa jcr:primaryType="nt:unstructured">
                 <default
+                    jcr:lastModified="{Date}2020-05-26T14:23:48.078-07:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="WKND SPA React App Policy"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[wknd-spa-react.react]"
-                    isRoot="{Boolean}true"
-                    structureDepth="3"/>
+                    clientlibs="wknd-spa-react.react"
+                    isRoot="true"
+                    structureDepth="2">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </default>
             </spa>
+            <header jcr:primaryType="nt:unstructured">
+                <policy_1590527695354
+                    jcr:lastModified="{Date}2020-05-26T14:15:57.626-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="WKND SPA Header"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    collectAllPages="false"
+                    navigationRoot="/content/wknd-spa-react/us/en"
+                    structureDepth="3"
+                    structureStart="1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1590527695354>
+            </header>
         </components>
     </wknd-spa-react>
     <wcm jcr:primaryType="nt:unstructured">
@@ -480,7 +498,7 @@
                 <responsivegrid jcr:primaryType="nt:unstructured">
                     <spa-default
                         jcr:description="Includes only SPA-Enabled components."
-                        jcr:lastModified="{Date}2020-05-26T11:56:11.537-07:00"
+                        jcr:lastModified="{Date}2020-05-26T14:12:45.662-07:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="SPA Content"
@@ -498,6 +516,15 @@
                             </assetToComponentMapping>
                         </cq:authoring>
                     </spa-default>
+                    <policy_1590527271182
+                        jcr:lastModified="{Date}2020-05-26T14:12:31.302-07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SPA Structure"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd-spa-react/components/image,/apps/wknd-spa-react/components/text,/apps/wknd-spa-react/components/header]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1590527271182>
                 </responsivegrid>
             </components>
         </foundation>
