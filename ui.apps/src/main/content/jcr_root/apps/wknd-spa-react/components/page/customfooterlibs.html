@@ -23,3 +23,11 @@
   data-sly-test="${wcmmode.edit || wcmmode.preview}"
   data-sly-call="${clientLib.js @ categories='cq.authoring.pagemodel.messaging'}"
 ></sly>
+
+<!--/*
+    Additional css to faciliate authoring
+    */-->
+<sly
+  data-sly-test="${wcmmode.edit}"
+  data-sly-call="${clientLib.css @ categories='wknd-spa-react.author'}"
+></sly>

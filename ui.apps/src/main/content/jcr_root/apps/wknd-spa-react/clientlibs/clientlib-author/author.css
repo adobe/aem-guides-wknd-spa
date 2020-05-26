@@ -1,0 +1,7 @@
+.aem-AuthorLayer-structure body.page.basicpage {
+    padding-top: 0px;
+}
+
+.aem-AuthorLayer-structure .Header {
+    position: static;
+}
