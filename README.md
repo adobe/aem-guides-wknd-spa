@@ -7,6 +7,24 @@ This is the code companion for a series of tutorials designed for developers new
 
 The starter and solution branches in this repository correspond to **React** and **Angular** versions of the tutorial.
 
+## Angular Tutorials
+
+* **Create a Project**
+  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/tutorials/develop-spa-angular/create-project.html)
+  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/create-project-solution)
+* **Integrate the SPA**
+  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/tutorials/develop-spa-angular/integrate-spa.html)
+  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-start)
+  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)
+* **Map SPA Components**
+  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/tutorials/develop-spa-angular/map-components.html)
+  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-start)
+  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution)
+* **Navigation and routing**
+  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/tutorials/develop-spa-angular/navigation-routing.html)
+  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-start)
+  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution)
+
 ## React Tutorials
 
 * **Create a Project**
