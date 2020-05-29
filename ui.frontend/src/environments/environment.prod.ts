@@ -16,7 +16,7 @@
 
 export const environment = {
   appRoot:
-    "/content/wknd-spa-angular/${language_country.split('_').get(1)}/${language_country.split('_').get(0)}/home.html", // tslint:disable-line
+    "/content/wknd-spa-angular/us/en/home.html", // tslint:disable-line
   production: true,
   publicUrl:
     '/etc.clientlibs/wknd-spa-angular/clientlibs/clientlib-angular/resources'
