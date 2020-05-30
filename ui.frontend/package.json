@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "ng serve --open --proxy-config ./proxy.conf.json",
+    "start:mock": "ng serve --open --proxy-config ./proxy.mock.conf.json",
     "build": "ng lint && ng build && clientlib",
     "build:production": "ng lint && ng build --prod && clientlib",
     "test": "ng test",
@@ -22,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "custom-event-polyfill": "^1.0.7",
+    "normalize-scss": "^7.0.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "whatwg-fetch": "^3.0.0",

@@ -16,28 +16,27 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
+/* styles.scss * /
+
+/* Normalize */
+@import '~normalize-scss/sass/normalize';
+
+@import './styles/variables';
 
 body {
-  background-color: #ffffff;
+    background-color: $body-bg;
+    font-family: $font-family-base;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-base;
+    text-align: left;
+    color: $text-color;
+    line-height: $line-height-base;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-.nav-container,
-.rw-box {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-  color: #000000;
+body.page {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $gutter-padding;
+    padding-top: $header-height;
 }

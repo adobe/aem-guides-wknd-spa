@@ -1,0 +1,30 @@
+@import "~src/styles/variables";
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 99;
+    background-color: $brand-primary;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.24);
+}
+
+.header-container {
+    display: flex;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-left: $gutter-padding;
+    padding-right: $gutter-padding;
+}
+
+.logo {
+    z-index: 100;
+    display: flex;
+    padding-top: $gutter-padding;
+    padding-bottom: $gutter-padding;
+}
+
+.logo-img {
+    width: 100px;
+}
