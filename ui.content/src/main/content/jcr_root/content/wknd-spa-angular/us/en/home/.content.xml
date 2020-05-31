@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Page">
+    jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-10-04T09:50:29.650+02:00"
+        cq:lastModified="{Date}2020-05-30T17:43:45.792-07:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
@@ -15,12 +15,104 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <text
+                    jcr:lastModified="{Date}2020-05-30T17:18:51.661-07:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd-spa-angular/components/text"
-                    text="&lt;p>Hello World!&lt;/p>"
+                    text="&lt;h1 style=&quot;text-align: center;&quot;>&lt;u>What are you doing this WKND?&lt;/u>&lt;/h1>&#xd;&#xa;"
                     textIsRich="true">
-                    <cq:responsive jcr:primaryType="nt:unstructured"/>
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="12"/>
+                    </cq:responsive>
                 </text>
+                <image
+                    jcr:created="{Date}2020-05-30T17:29:49.853-07:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-05-30T17:29:49.853-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-angular/components/image"
+                    fileReference="/content/dam/wknd/en/magazine/skitouring/Skitouring6Sjoeberg.JPG">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="12"/>
+                    </cq:responsive>
+                </image>
+                <image_1379277862
+                    jcr:created="{Date}2020-05-30T17:30:23.613-07:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-05-30T17:30:37.776-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-angular/components/image"
+                    fileReference="/content/dam/wknd/en/activities/hiking/alpinists-himalayas.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="12"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </image_1379277862>
+                <image_1191351640
+                    jcr:created="{Date}2020-05-30T17:31:12.247-07:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-05-30T17:31:12.247-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-angular/components/image"
+                    fileReference="/content/dam/wknd/en/activities/cycling/forest-trail.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="12"/>
+                        <tablet
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </image_1191351640>
+                <text_386303036
+                    jcr:created="{Date}2020-05-27T16:09:41.987-07:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-05-30T17:31:45.464-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-angular/components/text"
+                    text="&lt;p>Check out some of the great adventures above!&lt;/p>&#xd;&#xa;"
+                    textIsRich="true">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="12"/>
+                    </cq:responsive>
+                </text_386303036>
             </responsivegrid>
         </root>
     </jcr:content>

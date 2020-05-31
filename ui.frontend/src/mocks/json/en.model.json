@@ -60,7 +60,7 @@
                             },
                             ":items": {
                                 "text": {
-                                    "text": "<p>Hello World! Updated mock content!</p>\r\n",
+                                    "text": "<h1><u>Hello World!</u></h1>",
                                     "richText": true,
                                     ":type": "wknd-spa-angular/components/text"
                                 },
@@ -68,11 +68,19 @@
                                     "text": "<p>A new text component.</p>\r\n",
                                     "richText": true,
                                     ":type": "wknd-spa-angular/components/text"
+                                },
+                                "image": {
+                                    "alt": "Rock Climber in New Zealand",
+                                    "title": "Rock Climber in New Zealand",
+                                    "src": "/mocks/images/adobestock-140634652.jpeg",
+                                    ":type": "wknd-spa-angular/components/image"
                                 }
+
                             },
                             ":itemsOrder": [
                                 "text",
-                                "text_386303036"
+                                "text_386303036",
+                                "image"
                             ],
                             ":type": "wcm/foundation/components/responsivegrid"
                         }
