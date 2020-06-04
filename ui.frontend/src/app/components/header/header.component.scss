@@ -1,5 +1,13 @@
 @import "~src/styles/variables";
 
+$header-height: 75px;
+$transistion: .3s;
+$menu-toggle-color: $black;
+
+$link-color: $black;
+$link-hover-color: $white;
+$link-background: $black;
+
 .header {
     width: 100%;
     position: fixed;
@@ -8,6 +16,7 @@
     z-index: 99;
     background-color: $brand-primary;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.24);
+    padding: $gutter-padding;
 }
 
 .header-container {
@@ -21,10 +30,131 @@
 .logo {
     z-index: 100;
     display: flex;
-    padding-top: $gutter-padding;
-    padding-bottom: $gutter-padding;
+    padding-left: $gutter-padding;
 }
 
 .logo-img {
     width: 100px;
 }
+
+/* Menu Toggle */
+
+.menu-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    justify-content: space-around;
+    margin-right: 1em;
+    width: 2rem;
+
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+    span {
+    width: 2rem;
+    height: 0.25rem;
+    background: $menu-toggle-color;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+        &:first-child {
+            transform: rotate(0);
+        }
+
+        &:nth-child(2) {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        &:nth-child(3) {
+            transform: rotate(0);
+        }
+    }
+}
+
+/* Back Button */
+.backbutton {
+    background: $white;
+    border: none;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.backbutton-icon {
+   padding-left: 5px;
+}
+
+/* Header navigation */
+
+.header-navigation {
+    position: fixed;
+    top: $header-height - $gutter-padding;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: $transistion;
+    transition-delay: $transistion;
+    background-color: $brand-primary; 
+    
+    .navigation {
+        max-width: $max-width;
+        margin: 0 auto;
+        display: flex;
+        padding: $gutter-padding;
+    }
+
+    .navigation__group {
+        width: 100%;
+    }
+
+    .navigation__item-link {
+        color: $link-color;
+        font-size: $font-size-large;
+        text-transform: uppercase;
+        padding: $gutter-padding;
+        display: flex;
+        border-bottom: 1px solid $gray;
+
+        &:hover {
+            background: $link-background;
+            color: $link-hover-color;
+        }
+
+    }
+}
+
+/* open Header */
+.header--menuopen {
+
+    .header-navigation {
+        height: 100%;
+        transition-delay: 0s;
+    }
+
+    .menu-toggle {
+        span {
+            &:first-child {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            &:nth-child(3) {
+                transform: translateY(2px) rotate(-45deg);
+            }
+        }
+    }
+} 
