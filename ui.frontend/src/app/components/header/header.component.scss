@@ -8,6 +8,10 @@ $link-color: $black;
 $link-hover-color: $white;
 $link-background: $black;
 
+:host-context {
+    display: block;
+}
+
 .header {
     width: 100%;
     position: fixed;

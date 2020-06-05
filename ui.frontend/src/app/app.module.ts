@@ -35,7 +35,7 @@ import { ImageComponent } from './components/image/image.component';
   ],
   providers: [ModelManagerService, { provide: APP_BASE_HREF, useValue: '/' }],
   declarations: [AppComponent, TextComponent, PageComponent, HeaderComponent, ImageComponent],
-  entryComponents: [TextComponent, PageComponent, ImageComponent],
+  entryComponents: [TextComponent, PageComponent, ImageComponent, HeaderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

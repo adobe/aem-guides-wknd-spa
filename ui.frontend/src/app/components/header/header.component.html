@@ -1,4 +1,4 @@
-<header class="header" [class.header--menuopen]="isMenuOpen">
+<header *ngIf="hasNavigation" class="header" [class.header--menuopen]="isMenuOpen">
     <div class="header-container">
         <button class="menu-toggle" [attr.aria-expanded]="isMenuOpen" title="Toggle Menu" (click)="onMenuToggle()">
             <span></span>

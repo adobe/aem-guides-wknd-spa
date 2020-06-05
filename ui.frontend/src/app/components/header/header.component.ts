@@ -1,6 +1,14 @@
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Location} from '@angular/common';
+import {MapTo} from '@adobe/cq-angular-editable-components';
+
+const HeaderEditConfig = {
+  emptyLabel: 'Header',
+  isEmpty: cqModel =>
+    !cqModel || !cqModel.items || cqModel.items.length < 1
+};
+
 
 @Component({
   selector: 'app-header',
@@ -8,6 +16,7 @@ import {Location} from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() items: object[];
   isMenuOpen = false;
   isHome = false;
   homePageUrl;
@@ -18,6 +27,9 @@ export class HeaderComponent implements OnInit {
     this.setHomePage();
   }
 
+  get hasNavigation() {
+    return this.items && this.items.length > 0;
+  }
 
   setHomePage() {
     this.isHome = '/content/wknd-spa-angular/us/en/home' === this.route.snapshot.data.path;
@@ -33,3 +45,5 @@ export class HeaderComponent implements OnInit {
   }
 
 }
+
+MapTo('wknd-spa-angular/components/header')(HeaderComponent, HeaderEditConfig);
