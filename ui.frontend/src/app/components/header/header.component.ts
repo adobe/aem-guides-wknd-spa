@@ -2,6 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 import {Location} from '@angular/common';
 import {MapTo} from '@adobe/cq-angular-editable-components';
+import { NavigationLink } from '../navigation/navigation-link';
 
 const HeaderEditConfig = {
   emptyLabel: 'Header',
@@ -32,8 +33,11 @@ export class HeaderComponent implements OnInit {
   }
 
   setHomePage() {
-    this.isHome = '/content/wknd-spa-angular/us/en/home' === this.route.snapshot.data.path;
-    this.homePageUrl = '/content/wknd-spa-angular/us/en/home.html';
+    if (this.hasNavigation) {
+      const rootNavigationLink: NavigationLink = new NavigationLink(this.items[0]);
+      this.isHome = rootNavigationLink.path === this.route.snapshot.data.path;
+      this.homePageUrl = rootNavigationLink.url;
+    }
   }
 
   onBackClick() {
