@@ -2,13 +2,13 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2020-05-30T17:17:48.591-07:00"
+        cq:lastModified="{Date}2020-06-05T05:22:23.912-07:00"
         cq:lastModifiedBy="admin"
         cq:policy="wknd-spa-angular/components/page/policy_spa"
         jcr:primaryType="nt:unstructured"
         sling:resourceType="wcm/core/components/policies/mappings">
         <root
-            cq:policy="wcm/foundation/components/responsivegrid/spa-default"
+            cq:policy="wcm/foundation/components/responsivegrid/policy_1591359151969"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/core/components/policies/mapping">
             <responsivegrid
@@ -24,6 +24,10 @@
                     </components>
                 </wknd-spa-angular>
             </responsivegrid>
+            <header
+                cq:policy="wknd-spa-angular/components/header/policy_1591359653207"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
         </root>
     </jcr:content>
 </jcr:root>

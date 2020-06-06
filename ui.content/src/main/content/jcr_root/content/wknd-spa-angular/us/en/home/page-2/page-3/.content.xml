@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2020-06-05T05:39:13.178-07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Page 3"
+        sling:resourceType="wknd-spa-angular/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:created="{Date}2018-10-22T16:48:57.968+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-10-22T16:49:29.168+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <text
+                    jcr:created="{Date}2020-06-05T05:38:50.910-07:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-06-05T05:39:06.019-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-angular/components/text"
+                    text="&lt;h1>&lt;u>Page 3&lt;/u>&lt;/h1>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <image
+                    jcr:created="{Date}2020-06-05T05:39:13.174-07:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-06-05T05:39:13.174-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-angular/components/image"
+                    fileReference="/content/dam/wknd/en/magazine/skitouring/Skitouring6Sjoeberg.JPG"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>
