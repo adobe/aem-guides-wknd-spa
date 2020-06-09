@@ -64,11 +64,6 @@
                     </repositoryStructurePackages>
                     <embeddeds>
                         <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.core</artifactId>
-                            <target>/apps/wknd-spa-react/install</target>
-                        </embedded>
-                        <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>wknd-spa-react.core</artifactId>
                             <target>/apps/wknd-spa-react/install</target>
@@ -79,12 +74,6 @@
                             <target>/apps/wknd-spa-react/install</target>
                         </embedded>
                     </embeddeds>
-                    <subPackages>
-                        <subPackage>
-                            <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.all</artifactId>
-                        </subPackage>
-                    </subPackages>
                     <dependencies>
                         <dependency>
                             <groupId>com.adobe.cq</groupId>
@@ -93,6 +82,10 @@
                         <dependency>
                             <groupId>com.adobe.cq</groupId>
                             <artifactId>core.wcm.components.config</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.adobe.aem</groupId>
+                            <artifactId>spa.project.core.ui.apps</artifactId>
                         </dependency>
                     </dependencies>
                 </configuration>
@@ -153,7 +146,7 @@
         <!-- SPA Project Core (includes hierarchy page) -->
         <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.all</artifactId>
+            <artifactId>spa.project.core.ui.apps</artifactId>
             <type>zip</type>
         </dependency>
         <dependency>
@@ -186,8 +179,7 @@
 
         <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>uber-jar</artifactId>
-            <classifier>apis</classifier>
+            <artifactId>aem-sdk-api</artifactId>
         </dependency>
 
         <dependency>
@@ -218,4 +210,6 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    
 </project>
