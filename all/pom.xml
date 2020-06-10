@@ -65,29 +65,10 @@
                         </embedded>
                         <embedded>
                             <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.core</artifactId>
-                            <target>/apps/wknd-spa-react-vendor-packages/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.content</artifactId>
-                            <type>zip</type>
-                            <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.config</artifactId>
-                            <type>zip</type>
+                            <artifactId>spa.project.core.ui.apps</artifactId>
                             <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
                         </embedded>
                     </embeddeds>
-                    <subPackages>
-                        <subPackage>
-                            <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.all</artifactId>
-                            <filter>true</filter>
-                        </subPackage>
-                    </subPackages>
                 </configuration>
             </plugin>
             <plugin>
@@ -171,6 +152,56 @@
                 </plugins>
             </build>
         </profile>
+        <!-- AEM 6.x Profile to include Core Components-->
+        <profile>
+            <id>classic</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                    <groupId>org.apache.jackrabbit</groupId>
+                    <artifactId>filevault-package-maven-plugin</artifactId>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <group>com.adobe.aem.guides</group>
+                        <embeddeds>
+                            <embedded>
+                                <groupId>com.adobe.aem.guides</groupId>
+                                <artifactId>wknd-spa-react.ui.apps</artifactId>
+                                <type>zip</type>
+                                <target>/apps/wknd-spa-react-packages/application/install</target>
+                            </embedded>
+                            <embedded>
+                                <groupId>com.adobe.aem.guides</groupId>
+                                <artifactId>wknd-spa-react.ui.content</artifactId>
+                                <type>zip</type>
+                                <target>/apps/wknd-spa-react-packages/content/install</target>
+                            </embedded>
+                            <embedded>
+                                <groupId>com.adobe.aem</groupId>
+                                <artifactId>spa.project.core.ui.apps</artifactId>
+                                <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
+                            </embedded>
+                            <embedded>
+                                <groupId>com.adobe.cq</groupId>
+                                <artifactId>core.wcm.components.content</artifactId>
+                                <type>zip</type>
+                                <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
+                            </embedded>
+                            <embedded>
+                                <groupId>com.adobe.cq</groupId>
+                                <artifactId>core.wcm.components.config</artifactId>
+                                <type>zip</type>
+                                <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
+                            </embedded>
+                        </embeddeds>
+                    </configuration>
+                </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
     <!-- ====================================================================== -->
@@ -193,13 +224,14 @@
         <!-- SPA Project Core (includes hierarchy page) -->
         <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.all</artifactId>
+            <artifactId>spa.project.core.ui.apps</artifactId>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>spa.project.core.core</artifactId>
         </dependency>
+        <!-- Core Component Dependency (6.x only)-->
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.content</artifactId>
