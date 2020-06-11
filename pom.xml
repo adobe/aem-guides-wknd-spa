@@ -44,11 +44,12 @@
         <sling.password>admin</sling.password>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
-        <core.wcm.components.version>2.8.0</core.wcm.components.version>
+        <core.wcm.components.version>2.9.0</core.wcm.components.version>
         <bnd.version>5.0.0</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spa.project.core.version>1.0.6</spa.project.core.version>
+        <aem.sdk.api>2020.6.3614.20200604T023048Z-200507</aem.sdk.api>
         <!--
           Environment for the NPM build. Possible values:
           - "" in development (=> `npm run build`)
@@ -120,8 +121,8 @@
                     <artifactId>frontend-maven-plugin</artifactId>
                     <version>1.7.6</version>
                     <configuration>
-                        <nodeVersion>v10.13.0</nodeVersion>
-                        <npmVersion>6.9.0</npmVersion>
+                        <nodeVersion>v13.7.0</nodeVersion>
+                        <npmVersion>6.13.0</npmVersion>
                     </configuration>
                     <executions>
                         <execution>
@@ -164,14 +165,11 @@
                             <configuration>
                                 <bnd><![CDATA[
 Bundle-Category: ${componentGroupName}
-
 # export all versioned packages except for conditional ones (https://github.com/bndtools/bnd/issues/3721#issuecomment-579026778)
 -exportcontents: ${removeall;${packages;VERSIONED};${packages;CONDITIONAL}}
-
 # reproducible builds (https://github.com/bndtools/bnd/issues/3521)
 -noextraheaders: true
 -snapshot: SNAPSHOT
-
 Bundle-DocURL:
 -plugin org.apache.sling.caconfig.bndplugin.ConfigurationClassScannerPlugin
 -plugin org.apache.sling.bnd.models.ModelsScannerPlugin
@@ -395,6 +393,18 @@ Bundle-DocURL:
                         <enabled>false</enabled>
                     </snapshots>
                 </repository>
+                <repository>
+                    <id>adobe-aem-releases</id>
+                    <name>Adobe AEM Repository</name>
+                    <url>https://downloads.experiencecloud.adobe.com/content/maven/public</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
             </repositories>
 
             <pluginRepositories>
@@ -419,7 +429,6 @@ Bundle-DocURL:
             <!--
                 To enable this feature for a bundle, the sling-maven-plugin
                 (without configuration) needs to be included:
-
                 <plugin>
                     <groupId>org.apache.sling</groupId>
                     <artifactId>sling-maven-plugin</artifactId>
@@ -526,10 +535,6 @@ Bundle-DocURL:
                     </plugins>
                 </pluginManagement>
             </build>
-            <properties>
-                <!-- Use `build:production` instead of `build` NPM script -->
-                <build.environment>:production</build.environment>
-            </properties>
         </profile>
     </profiles>
 
@@ -619,11 +624,18 @@ Bundle-DocURL:
                 <version>1.7.25</version>
                 <scope>test</scope>
             </dependency>
-            <!-- Adobe AEM Dependencies -->
+            <!-- Adobe AEM Cloud Service Dependencies -->
+             <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>aem-sdk-api</artifactId>
+                <version>${aem.sdk.api}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- Adobe AEM 6.x Dependencies -->
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>uber-jar</artifactId>
-                <version>6.5.0</version>
+                <version>6.4.8</version>
                 <classifier>apis</classifier>
                 <scope>provided</scope>
             </dependency>
@@ -689,7 +701,7 @@ Bundle-DocURL:
             <!-- SPA Project Core (includes hierarchy page model) -->
             <dependency>
                 <groupId>com.adobe.aem</groupId>
-                <artifactId>spa.project.core.all</artifactId>
+                <artifactId>spa.project.core.ui.apps</artifactId>
                 <type>zip</type>
                 <version>${spa.project.core.version}</version>
             </dependency>
