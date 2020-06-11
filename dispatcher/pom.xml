@@ -13,9 +13,9 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>wknd-spa-angular.dispatcher.ams</artifactId>
-  <name>WKND SPA Angular - Dispatcher</name>
+  <artifactId>wknd-spa-angular.dispatcher.cloud</artifactId>
   <packaging>pom</packaging>
+  <name>WKND SPA Angular - Dispatcher</name>
   <description>HTTP &amp; Dispatcher configurations for WKND SPA Angular</description>
 
 

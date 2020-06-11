@@ -149,11 +149,6 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>org.apache.sling.servlets.annotations</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>uber-jar</artifactId>
-            <classifier>apis</classifier>
-        </dependency>
-        <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.core</artifactId>
         </dependency>
@@ -188,4 +183,30 @@ Import-Package: javax.annotation;version=0.0.0,*
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <!-- Additional Profiles for Cloud Service vs. 6.x -->
+    <profiles>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <id>cloudservice</id>
+            <dependencies>
+                <dependency>
+                    <groupId>com.adobe.aem</groupId>
+                    <artifactId>aem-sdk-api</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>classic</id>
+            <dependencies>
+                <dependency>
+                    <groupId>com.adobe.aem</groupId>
+                    <artifactId>uber-jar</artifactId>
+                    <classifier>apis</classifier>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 </project>
