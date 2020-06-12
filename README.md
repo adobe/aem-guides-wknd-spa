@@ -9,38 +9,18 @@ The starter and solution branches in this repository correspond to **Angular** a
 
 ## Angular Tutorials
 
-* **SPA Editor Project**
-  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/create-project.html)
-  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/create-project-start)
-  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/create-project-solution)
-* **Integrate the SPA**
-  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/integrate-spa.html)
-  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-start)
-  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution)
-* **Map SPA Components**
-  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/map-components.html)
-  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-start)
-  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution)
-* **Navigation and routing**
-  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/navigation-routing.html)
-  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-start)
-  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution)
+| Tutorial | Starter Code | Solution |
+|----------|--------------|----------|
+| SPA Editor Project | [Angular/create-project-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/create-project-start) | [Angular/create-project-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/create-project-solution) |
+| Integrate the SPA | [Angular/integrate-spa-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-start) | [Angular/integrate-spa-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution) |
+| Map SPA Components | [Angular/map-components-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-start) | [Angular/map-components-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) |
+| Navigation and routing | [Angular/navigation-routing-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-start) | [Angular/navigation-routing-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution) |
 
 ## React Tutorials
 
-* **SPA Editor Project**
-  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/create-project.html)
-  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/React/create-project-start)
-  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/React/create-project-solution)
-* **Integrate the SPA**
-  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/integrate-spa.html)
-  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/React/integrate-spa-start)
-  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/React/integrate-spa-solution)
-* **Map SPA Components**
-  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/map-components.html)
-  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/React/map-components-start)
-  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/React/map-components-solution)
-* **Navigation and routing**
-  * [Tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/navigation-routing.html)
-  * [Start](https://github.com/adobe/aem-guides-wknd-spa/tree/React/navigation-routing-start)
-  * [Solution](https://github.com/adobe/aem-guides-wknd-spa/tree/React/navigation-routing-solution)
+| Tutorial | Starter Code | Solution |
+|----------|--------------|----------|
+| SPA Editor Project | [React/create-project-start](https://github.com/adobe/aem-guides-wknd-spa/tree/React/create-project-start) | [React/create-project-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/React/create-project-solution) |
+| Integrate the SPA | [React/integrate-spa-start](https://github.com/adobe/aem-guides-wknd-spa/tree/React/integrate-spa-start) | [React/integrate-spa-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/React/integrate-spa-solution) |
+| Map SPA Components | [React/map-components-start](https://github.com/adobe/aem-guides-wknd-spa/tree/React/map-components-start) | [React/map-components-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/React/map-components-solution) |
+| Navigation and routing | [React/navigation-routing-start](https://github.com/adobe/aem-guides-wknd-spa/tree/React/navigation-routing-start) | [React/navigation-routing-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/React/navigation-routing-solution) |
