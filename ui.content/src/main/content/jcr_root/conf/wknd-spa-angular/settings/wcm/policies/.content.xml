@@ -503,7 +503,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="SPA Content"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd-spa-angular/components/image,/apps/wknd-spa-angular/components/text]">
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd-spa-angular/components/image,/apps/wknd-spa-angular/components/text,/apps/wknd-spa-angular/components/card,/apps/wknd-spa-angular/components/custom-component]">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -523,7 +523,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="SPA Structure"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd-spa-angular/components/image,/apps/wknd-spa-angular/components/text,/apps/wknd-spa-angular/components/header]">
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd-spa-angular/components/image,/apps/wknd-spa-angular/components/text,/apps/wknd-spa-angular/components/header,/apps/wknd-spa-angular/components/card, /apps/wknd-spa-angular/components/custom-component]">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
