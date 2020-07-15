@@ -1,0 +1,14 @@
+<div class="card"  *ngIf="hasContent">
+    <app-image class="card__image" [src]="src" [alt]="alt" [title]="title"></app-image>
+    <div class="card__content">
+        <h2 class="card__title">
+            {{pageTitle}}
+            <span class="card__lastmod" *ngIf="lastModifiedDate">{{lastModifiedDate}}</span>
+        </h2>
+        <div class="card__action-container" *ngIf="hasLink">
+            <a [routerLink]="link" class="card__action-link" [title]="linkText">
+                {{linkText}}
+            </a>
+        </div>
+    </div>
+</div>
