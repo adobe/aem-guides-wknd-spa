@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {MapTo} from '@adobe/cq-angular-editable-components';
 
 const CustomEditConfig = {
   emptyLabel: 'Custom Component',
@@ -21,3 +22,5 @@ export class CustomComponent implements OnInit {
   }
 
 }
+
+MapTo('wknd-spa-angular/components/custom-component')(CustomComponent, CustomEditConfig);

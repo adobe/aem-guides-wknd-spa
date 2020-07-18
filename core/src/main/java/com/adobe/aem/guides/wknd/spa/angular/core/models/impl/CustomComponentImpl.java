@@ -4,6 +4,7 @@ import org.apache.sling.models.annotations.*;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import com.adobe.aem.guides.wknd.spa.angular.core.models.CustomComponent;
 
@@ -12,12 +13,19 @@ import com.adobe.aem.guides.wknd.spa.angular.core.models.CustomComponent;
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 public class CustomComponentImpl implements CustomComponent {
 
-    static final String RESOURCE_TYPE = "";
+    static final String RESOURCE_TYPE = "wknd-spa-angular/components/custom-component";
+
+    @ValueMapValue
+    private String message;
 
     @Override
     public String getMessage() {
-        return null;
+        return StringUtils.isNotBlank(message) ? message.toUpperCase() : "";
     }
 
+    @Override
+    public String getExportedType() {
+        return CustomComponentImpl.RESOURCE_TYPE;
+    }
 
 }
