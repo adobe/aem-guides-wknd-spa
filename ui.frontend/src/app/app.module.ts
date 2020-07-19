@@ -28,6 +28,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ImageComponent } from './components/image/image.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CustomComponent } from './components/custom/custom.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   imports: [
@@ -37,7 +38,7 @@ import { CustomComponent } from './components/custom/custom.component';
   ],
   providers: [ModelManagerService, { provide: APP_BASE_HREF, useValue: '/' }],
   declarations: [AppComponent, TextComponent, PageComponent, HeaderComponent,
-    ImageComponent, NavigationComponent, CustomComponent],
+    ImageComponent, NavigationComponent, CustomComponent, CardComponent],
   entryComponents: [TextComponent, PageComponent, ImageComponent, HeaderComponent, CustomComponent],
   bootstrap: [AppComponent]
 })
