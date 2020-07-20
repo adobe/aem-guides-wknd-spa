@@ -1,3 +1,14 @@
 <div class="card"  *ngIf="hasContent">
     <app-image class="card__image" [src]="src" [alt]="alt" [title]="title"></app-image>
+    <div class="card__content">
+        <h2 class="card__title">
+            {{cardTitle}}
+            <span class="card__lastmod" *ngIf="lastModifiedDate">{{lastModifiedDate}}</span>
+        </h2>
+        <div class="card__action-container" *ngIf="hasCTA">
+            <a [routerLink]="ctaLinkURL" class="card__action-link" [title]="ctaText">
+                {{ctaText}}
+            </a>
+        </div>
+    </div>
 </div>
