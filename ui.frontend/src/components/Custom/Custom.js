@@ -12,7 +12,7 @@ export const CustomEditConfig = {
 export default class Custom extends Component {
 
     render() {
-        if(ImageEditConfig.isEmpty(this.props)) {
+        if(CustomEditConfig.isEmpty(this.props)) {
             return null;
         }
 
