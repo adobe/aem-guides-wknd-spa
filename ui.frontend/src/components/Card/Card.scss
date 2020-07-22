@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+
+.Card {
+    padding-top: $gutter-padding * 2;
+    padding-bottom: $gutter-padding * 2;
+}
+
+.Card__image {
+    max-height: 350px;
+    overflow: hidden;
+}
+
+.Card__content {
+    width: 100%;
+    float: left;
+    padding-top: 0.5em;
+}
+
+.Card__title {
+    margin-top: 0;
+    font-size: $font-size-large;
+}
+
+
+.Card__lastmod {
+    font-style: italic;
+    font-size: $font-size-small;
+    padding-right: 1em;
+    padding-top: 1em;
+    float: right;
+}
+
+.Card__action-container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    float: left;
+}
+.Card__action-link {
+    background-color: $brand-primary;
+    text-transform: uppercase;
+    color: $text-color;
+    font-size: $font-size-small;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    float: left;
+} 
