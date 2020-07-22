@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2020-05-26T13:54:19.631-07:00"
+        cq:lastModified="{Date}2020-07-22T15:30:16.818-07:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd-spa-react/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
@@ -23,14 +23,21 @@
                     textIsRich="true">
                     <cq:responsive jcr:primaryType="nt:unstructured"/>
                 </text>
-                <image
-                    jcr:created="{Date}2020-05-26T12:11:54.934-07:00"
+                <card
+                    jcr:created="{Date}2020-07-22T11:40:02.876-07:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2020-05-26T12:11:54.934-07:00"
+                    jcr:lastModified="{Date}2020-07-22T15:30:16.814-07:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wknd-spa-react/components/image"
-                    fileReference="/content/dam/wknd/en/magazine/skitouring/Skitouring6Sjoeberg.JPG">
+                    sling:resourceType="wknd-spa-react/components/card"
+                    altValueFromDAM="true"
+                    cardPath="/content/wknd-spa-react/us/en/home/page-1"
+                    ctaText="Read More"
+                    displayPopupTitle="false"
+                    fileReference="/content/dam/wknd/en/magazine/skitouring/Skitouring6Sjoeberg.JPG"
+                    isDecorative="false"
+                    titleFromPage="true"
+                    titleValueFromDAM="true">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
                             jcr:primaryType="nt:unstructured"
@@ -45,20 +52,22 @@
                             offset="0"
                             width="12"/>
                     </cq:responsive>
-                </image>
-                <image_copy
-                    jcr:created="{Date}2020-05-26T12:11:54.934-07:00"
+                </card>
+                <card_copy
+                    jcr:created="{Date}2020-07-22T11:40:02.876-07:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2020-05-26T13:54:19.627-07:00"
+                    jcr:lastModified="{Date}2020-07-22T15:30:12.310-07:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wknd-spa-react/components/image"
-                    alt="Ski Mountain"
-                    altValueFromDAM="false"
-                    displayPopupTitle="true"
+                    sling:resourceType="wknd-spa-react/components/card"
+                    altValueFromDAM="true"
+                    cardPath="/content/wknd-spa-react/us/en/home/page-2"
+                    ctaText="Read More"
+                    displayPopupTitle="false"
                     fileReference="/content/dam/wknd/en/adventures/ski-touring-mont-blanc/AdobeStock_291339093.jpeg"
                     isDecorative="false"
-                    titleValueFromDAM="false">
+                    titleFromPage="true"
+                    titleValueFromDAM="true">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
                             jcr:primaryType="nt:unstructured"
@@ -73,15 +82,22 @@
                             offset="0"
                             width="12"/>
                     </cq:responsive>
-                </image_copy>
-                <image_copy_2085837168
-                    jcr:created="{Date}2020-05-26T12:11:54.934-07:00"
+                </card_copy>
+                <card_copy_896695069
+                    jcr:created="{Date}2020-07-22T11:40:02.876-07:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2020-05-26T12:14:46.325-07:00"
+                    jcr:lastModified="{Date}2020-07-22T15:30:08.185-07:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wknd-spa-react/components/image"
-                    fileReference="/content/dam/wknd/en/activities/cycling/forest-trail.jpg">
+                    sling:resourceType="wknd-spa-react/components/card"
+                    altValueFromDAM="true"
+                    cardPath="/content/wknd-spa-react/us/en/home/page-2/page-3"
+                    ctaText="Read More"
+                    displayPopupTitle="false"
+                    fileReference="/content/dam/wknd/en/activities/cycling/forest-trail.jpg"
+                    isDecorative="false"
+                    titleFromPage="true"
+                    titleValueFromDAM="true">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
                             jcr:primaryType="nt:unstructured"
@@ -96,7 +112,7 @@
                             offset="0"
                             width="12"/>
                     </cq:responsive>
-                </image_copy_2085837168>
+                </card_copy_896695069>
                 <text_1887560153
                     jcr:created="{Date}2020-05-26T12:20:04.888-07:00"
                     jcr:createdBy="admin"

@@ -61,6 +61,9 @@ public class CardImpl implements Card {
         // Note that @PostConstruct code will always be executed on Model instantiation.
         // If the work done in PostConstruct is expensive and not always used in the consumption of the model, it is
         // better to lazy-execute the logic in the getter and persist the result in  model state if it is requested again.
+        if(StringUtils.isNotBlank(cardPath) && pageManager != null) {
+            cardPage = pageManager.getPage(this.cardPath);
+        }
     }
 
     @Override
@@ -81,7 +84,34 @@ public class CardImpl implements Card {
         return image.getTitle();
     }
 
+    @Override
+    public String getCtaLinkURL() {
+        if(cardPage != null) {
+            return cardPage.getPath() + ".html";
+        }
+        return null;
+    }
 
+    @Override
+    public String getCtaText() {
+        return ctaText;
+    }
+
+    @Override
+    public Calendar getCardLastModified() {
+    if(cardPage != null) {
+        return cardPage.getLastModified();
+    }
+    return null;
+    }
+
+    @Override
+    public String getCardTitle() {
+        if(titleFromPage) {
+            return cardPage != null ? cardPage.getTitle() : null;
+        }
+        return cardTitle;
+    }
 
     @Override
     public String getExportedType() {
