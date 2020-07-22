@@ -76,14 +76,6 @@
                     </embeddeds>
                     <dependencies>
                         <dependency>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.content</artifactId>
-                        </dependency>
-                        <dependency>
-                            <groupId>com.adobe.cq</groupId>
-                            <artifactId>core.wcm.components.config</artifactId>
-                        </dependency>
-                        <dependency>
                             <groupId>com.adobe.aem</groupId>
                             <artifactId>spa.project.core.ui.apps</artifactId>
                         </dependency>
