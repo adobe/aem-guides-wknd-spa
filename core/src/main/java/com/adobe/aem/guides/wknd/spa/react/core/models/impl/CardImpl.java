@@ -23,7 +23,7 @@ import org.apache.sling.models.annotations.via.ResourceSuperType;
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
 public class CardImpl implements Card {
 
-    static final String RESOURCE_TYPE = "wknd-spa-angular/components/card";
+    static final String RESOURCE_TYPE = "wknd-spa-react/components/card";
 
     @Self
     private SlingHttpServletRequest request;
