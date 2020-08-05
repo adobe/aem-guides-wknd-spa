@@ -45,17 +45,12 @@ const serverConfig = {
     module: {
         rules: [
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(pdf|jpg|png|gif|svg|ico)$/,
                 use: [
-                  'file-loader',
-                  {
-                    loader: 'image-webpack-loader',
-                    options: {
-                      bypassOnDebug: true, // webpack@1.x
-                      disable: true, // webpack@2.x and newer
+                    {
+                        loader: 'url-loader'
                     },
-                  },
-                ],
+                ]
             },
             {
                 test: /\.js$/,
