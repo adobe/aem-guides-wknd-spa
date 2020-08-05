@@ -28,6 +28,7 @@
         <module>all</module>
         <module>core</module>
         <module>ui.frontend</module>
+        <module>ui.server-side</module>
         <module>ui.apps</module>
         <module>ui.apps.structure</module>
         <module>ui.content</module>
@@ -50,6 +51,14 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spa.project.core.version>1.0.6</spa.project.core.version>
         <aem.sdk.api>2020.6.3614.20200604T023048Z-200507</aem.sdk.api>
+
+        <!-- Update: Used by frontend-maven-plugin -->
+        <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
+        <node.version>v12.13.0</node.version>
+        <npm.version>6.12.0</npm.version>
+
+        <ssr.render>false</ssr.render>
+        <!-- end update -->
     </properties>
 
     <build>
@@ -115,8 +124,8 @@
                     <artifactId>frontend-maven-plugin</artifactId>
                     <version>1.7.6</version>
                     <configuration>
-                        <nodeVersion>v13.7.0</nodeVersion>
-                        <npmVersion>6.13.0</npmVersion>
+                        <nodeVersion>${node.version}</nodeVersion>
+                        <npmVersion>${npm.version}</npmVersion>
                     </configuration>
                     <executions>
                         <execution>
@@ -534,6 +543,15 @@ Bundle-DocURL:
                 </pluginManagement>
             </build>
         </profile>
+        <profile>
+            <id>serverSideRender</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <ssr.render>true</ssr.render>
+            </properties>
+        </profile>
     </profiles>
 
 
@@ -633,10 +651,11 @@ Bundle-DocURL:
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>uber-jar</artifactId>
-                <version>6.4.4</version>
+                <version>6.5.5</version>
                 <classifier>apis</classifier>
                 <scope>provided</scope>
             </dependency>
+            <!-- Adobe AEM Remote Rendering Dependencies -->
             <!-- Apache Sling Dependencies -->
             <dependency>
                 <groupId>org.apache.sling</groupId>

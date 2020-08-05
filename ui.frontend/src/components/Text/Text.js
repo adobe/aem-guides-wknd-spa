@@ -15,7 +15,6 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 import { MapTo } from '@adobe/cq-react-editable-components';
-import DOMPurify from 'dompurify';
 import React, { Component } from 'react';
 import extractModelId from '../../utils/extract-model-id';
 
@@ -43,9 +42,9 @@ class Text extends Component {
       <div
         id={extractModelId(this.props.cqPath)}
         data-rte-editelement
-        dangerouslySetInnerHTML={{
-          __html: DOMPurify.sanitize(this.props.text)
-        }}
+        dangerouslySetInnerHTML={
+          {__html: this.props.text}
+        }
       />
     );
   }

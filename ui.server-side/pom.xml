@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ====================================================================== -->
+    <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
+    <!-- ====================================================================== -->
+    <parent>
+        <groupId>com.adobe.aem.guides</groupId>
+        <artifactId>wknd-spa-react</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- ====================================================================== -->
+    <!-- P R O J E C T  D E S C R I P T I O N                                   -->
+    <!-- ====================================================================== -->
+    <artifactId>wknd-spa-react.react-server</artifactId>
+    <packaging>pom</packaging>
+    <name>WKND Events - I/O Actions</name>
+    <description>I/O Runtime action for server side rendering</description>
+
+
+    <!-- ====================================================================== -->
+    <!-- B U I L D   D E F I N I T I O N                                        -->
+    <!-- ====================================================================== -->
+    <build>
+      <plugins>
+        <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>${frontend-maven-plugin.version}</version>
+
+            <executions>
+
+              <execution>
+                  <id>install node and npm</id>
+                  <goals>
+                  <goal>install-node-and-npm</goal>
+                  </goals>
+                  <configuration>
+                    <nodeVersion>${node.version}</nodeVersion>
+                    <npmVersion>${npm.version}</npmVersion>
+                  </configuration>
+              </execution>
+
+              <execution>
+                  <id>npm install</id>
+                  <goals>
+                  <goal>npm</goal>
+                  </goals>
+                  <!-- Optional configuration which provides for running any npm command -->
+                  <configuration>
+                    <arguments>install</arguments>
+                  </configuration>
+              </execution>
+
+              <execution>
+                  <id>npm version ${project.version} --allow-same-version</id>
+                  <goals>
+                  <goal>npm</goal>
+                  </goals>
+                  <!-- Optional configuration which provides for running any npm command -->
+                  <configuration>
+                    <arguments>version ${project.version} --allow-same-version</arguments>
+                  </configuration>
+              </execution>
+
+            </executions>
+        </plugin>
+      </plugins>
+  </build>
+  <profiles>
+    <profile>
+      <id>serverSideRender</id>
+      <!--
+          To enable this feature for a bundle, the maven-sling-plugin
+          (without configuration) needs to be included:
+
+          <plugin>
+              <groupId>org.apache.sling</groupId>
+              <artifactId>maven-sling-plugin</artifactId>
+          </plugin>
+      -->
+      <activation>
+          <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+          <pluginManagement>
+              <plugins>
+                  <plugin>
+                    <groupId>com.github.eirslett</groupId>
+                    <artifactId>frontend-maven-plugin</artifactId>
+                    <version>${frontend-maven-plugin.version}</version>
+
+                    <executions>
+                      <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                        <goal>install-node-and-npm</goal>
+                        </goals>
+                        <configuration>
+                          <nodeVersion>${node.version} </nodeVersion>
+                          <npmVersion>${npm.version}</npmVersion>
+                        </configuration>
+                      </execution>
+
+                      <execution>
+                          <id>npm install</id>
+                          <goals>
+                          <goal>npm</goal>
+                          </goals>
+                          <!-- Optional configuration which provides for running any npm command -->
+                          <configuration>
+                            <arguments>install</arguments>
+                          </configuration>
+                      </execution>
+                      <execution>
+                          <id>npm version ${project.version} --allow-same-version</id>
+                          <goals>
+                          <goal>npm</goal>
+                          </goals>
+                          <!-- Optional configuration which provides for running any npm command -->
+                          <configuration>
+                            <arguments>version ${project.version} --allow-same-version</arguments>
+                          </configuration>
+                      </execution>
+                      <execution>
+                          <id>npm run deploy</id>
+                          <goals>
+                          <goal>npm</goal>
+                          </goals>
+                          <configuration>
+                          <arguments>run deploy</arguments>
+                          </configuration>
+                      </execution>
+                    </executions>
+                </plugin>
+              </plugins>
+          </pluginManagement>
+      </build>
+    </profile>
+  </profiles>
+</project>
