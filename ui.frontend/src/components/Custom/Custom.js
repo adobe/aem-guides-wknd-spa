@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {MapTo} from '@adobe/cq-react-editable-components';
 
 export const CustomEditConfig = {
 
@@ -23,3 +24,5 @@ export default class Custom extends Component {
         );
     }
 }
+
+MapTo('wknd-spa-react/components/custom-component')(Custom, CustomEditConfig);
