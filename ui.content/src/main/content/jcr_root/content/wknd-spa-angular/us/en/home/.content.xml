@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2020-07-20T16:14:57.541-07:00"
+        cq:lastModified="{Date}2020-08-18T12:30:42.393-07:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
@@ -134,6 +134,24 @@
                             width="12"/>
                     </cq:responsive>
                 </text_386303036>
+                <tabs
+                    jcr:created="{Date}2020-08-18T12:30:42.381-07:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-08-18T12:30:42.381-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-angular/components/tabs">
+                    <item_1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 1"
+                        sling:resourceType="wcm/foundation/components/responsivegrid"
+                        layout="responsiveGrid"/>
+                    <item_2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 2"
+                        sling:resourceType="wcm/foundation/components/responsivegrid"
+                        layout="responsiveGrid"/>
+                </tabs>
             </responsivegrid>
         </root>
     </jcr:content>

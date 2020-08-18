@@ -4,8 +4,10 @@
     <jcr:content
         cq:created="{Date}2018-10-22T17:08:28.689+05:30"
         cq:createdBy="admin"
-        jcr:primaryType="cq:PageContent"
+        cq:lastModified="{Date}2020-08-18T12:32:17.867-07:00"
+        cq:lastModifiedBy="admin"
         jcr:description="WKND SPA Angular Page Template"
+        jcr:primaryType="cq:PageContent"
         jcr:title="SPA Page"
         status="enabled"/>
 </jcr:root>

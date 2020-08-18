@@ -490,6 +490,17 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_1591359653207>
             </header>
+            <tabs jcr:primaryType="nt:unstructured">
+                <policy_1597779112061
+                    jcr:lastModified="{Date}2020-08-18T12:32:17.863-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="SPA Tabs"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd-spa-angular/components/image,/apps/wknd-spa-angular/components/text]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1597779112061>
+            </tabs>
         </components>
     </wknd-spa-angular>
     <wcm jcr:primaryType="nt:unstructured">
@@ -498,12 +509,12 @@
                 <responsivegrid jcr:primaryType="nt:unstructured">
                     <spa-default
                         jcr:description="Includes only SPA-Enabled components."
-                        jcr:lastModified="{Date}2020-07-19T12:36:03.555-07:00"
+                        jcr:lastModified="{Date}2020-08-18T12:30:28.492-07:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="SPA Content"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd-spa-angular/components/card,/apps/wknd-spa-angular/components/custom-component,/apps/wknd-spa-angular/components/image,/apps/wknd-spa-angular/components/text]">
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/wknd-spa-angular/components/card,/apps/wknd-spa-angular/components/custom-component,/apps/wknd-spa-angular/components/image,/apps/wknd-spa-angular/components/tabs,/apps/wknd-spa-angular/components/text]">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
