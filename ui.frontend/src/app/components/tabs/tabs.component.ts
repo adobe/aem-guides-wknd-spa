@@ -1,5 +1,7 @@
 import {AfterViewInit, ChangeDetectorRef, Component, HostBinding, Input, OnInit} from '@angular/core';
 import {AEMAllowedComponentsContainerComponent, MapTo} from '@adobe/cq-angular-editable-components';
+import {AbstractContainerComponent, ContainerIsEmptyFn} from '../AbstractContainerComponent';
+
 const CONTAINER_CLASS_NAMES = 'aem-tabs';
 
 const TabsEditConfig = {
@@ -17,7 +19,7 @@ const TabsEditConfig = {
  * The current component provides the base presentational logic common to containers such as a grid or a page.
  * Container have in common the notion of item holders. Items are represented in the model by the fields _:items_ and _:itemsOrder_
  */
-export class TabsComponent extends AEMAllowedComponentsContainerComponent implements OnInit, AfterViewInit {
+export class TabsComponent extends AbstractContainerComponent implements OnInit, AfterViewInit {
 
     @HostBinding('class') class = 'cmp-tabs';
     @HostBinding('attr.data-cq-data-path') cqPath = 'cqPath';
@@ -95,4 +97,4 @@ export class TabsComponent extends AEMAllowedComponentsContainerComponent implem
 
 }
 
-MapTo('wknd-spa-angular/components/tab')(TabsComponent, TabsEditConfig);
+MapTo('wknd-spa-angular/components/tabs')(TabsComponent, ContainerIsEmptyFn);

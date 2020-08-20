@@ -1,47 +1,47 @@
-import {ComponentMapping} from "@adobe/cq-angular-editable-components";
+import { ComponentMapping } from '@adobe/cq-angular-editable-components';
 
 
 export interface ContainerProperties extends MappedComponentProperties {
     componentMapping?: typeof ComponentMapping;
-    cqItems: {[key: string]: Model};
+    cqItems: { [key: string]: Model };
     cqItemsOrder: string[];
 }
+/*
+export interface ContainerModel extends Model {
 
-export interface ContainerModel extends Model{
-
-}
+}*/
 
 
 export interface Model extends Object {
-    ":hierarchyType"?: string;
+    ':hierarchyType'?: string;
     /**
      * Path of the item/page
      */
-    ":path"?: string;
+    ':path'?: string;
     /**
      * Child pages (only present on page's itself, not on items)
      */
-    ":children"?: {[key: string]: Model};
+    ':children'?: { [key: string]: Model };
 
     /**
      * Items under the page / item
      */
-    ":items"?: {[key: string]: Model};
+    ':items'?: { [key: string]: Model };
 
     /**
      * Order of the items under the page / item
      * Can be used as keys for the :items property to iterate items in the proper order
      */
-    ":itemsOrder"?: string[];
+    ':itemsOrder'?: string[];
 
     /**
      * Resource type of the page / item
      */
-    ":type"?: string;
+    ':type'?: string;
 }
 
-export interface LabelledModel extends Model{
-    "cq:panelTitle": string
+export interface LabelledModel extends Model {
+    'cq:panelTitle': string;
 }
 
 /**
@@ -58,5 +58,5 @@ export interface ReloadForceAble {
 export interface MappedComponentProperties extends ReloadForceAble {
     isInEditor: boolean;
     cqPath: string;
-    class:string;
+    class: string;
 }
