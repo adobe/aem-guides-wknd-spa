@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2020-06-05T05:22:23.912-07:00"
+        cq:lastModified="{Date}2020-08-18T12:32:17.867-07:00"
         cq:lastModifiedBy="admin"
         cq:policy="wknd-spa-angular/components/page/policy_spa"
         jcr:primaryType="nt:unstructured"
@@ -19,6 +19,10 @@
                     <components jcr:primaryType="nt:unstructured">
                         <text
                             cq:policy="wknd-spa-angular/components/text/policy_231658911650842"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <tabs
+                            cq:policy="wknd-spa-angular/components/tabs/policy_1597779112061"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="wcm/core/components/policies/mapping"/>
                     </components>

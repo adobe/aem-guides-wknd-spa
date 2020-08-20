@@ -4,11 +4,11 @@
     <item_1
         jcr:primaryType="nt:unstructured"
         jcr:title="Tab 1"
-        sling:resourceType="wknd-spa-angular/components/container"
+        sling:resourceType="wcm/foundation/components/responsivegrid"
         layout="responsiveGrid"/>
     <item_2
         jcr:primaryType="nt:unstructured"
         jcr:title="Tab 2"
-        sling:resourceType="wknd-spa-angular/components/container"
+        sling:resourceType="wcm/foundation/components/responsivegrid"
         layout="responsiveGrid"/>
 </jcr:root>

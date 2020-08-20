@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2020-07-20T16:14:57.541-07:00"
+        cq:lastModified="{Date}2020-08-20T11:15:36.642-07:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
@@ -134,6 +134,68 @@
                             width="12"/>
                     </cq:responsive>
                 </text_386303036>
+                <tabs
+                    jcr:created="{Date}2020-08-20T11:12:19.406-07:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-08-20T11:14:43.980-07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-angular/components/tabs">
+                    <item_1
+                        cq:panelTitle="Tab 1"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 1"
+                        sling:resourceType="wcm/foundation/components/responsivegrid"
+                        layout="responsiveGrid">
+                        <text
+                            jcr:created="{Date}2020-08-20T11:12:24.624-07:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-08-20T11:13:36.575-07:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wknd-spa-angular/components/text"
+                            text="&lt;h1>Hello World&amp;nbsp;&lt;/h1>&#xd;&#xa;&lt;h2>This is my first tab!&lt;/h2>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </item_1>
+                    <item_2
+                        cq:panelTitle="Tab 2"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 2"
+                        sling:resourceType="wcm/foundation/components/responsivegrid"
+                        layout="responsiveGrid">
+                        <text
+                            jcr:created="{Date}2020-08-20T11:14:09.261-07:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-08-20T11:14:26.726-07:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wknd-spa-angular/components/text"
+                            text="&lt;p>This is my second tab!&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                    </item_2>
+                    <item_1597947281013
+                        cq:panelTitle="Tab 3"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <text
+                            jcr:created="{Date}2020-08-20T11:14:52.845-07:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-08-20T11:15:09.423-07:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wknd-spa-angular/components/text"
+                            text="&lt;p>This is my &lt;b>3rd&lt;/b> tab!&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <image
+                            jcr:created="{Date}2020-08-20T11:15:36.627-07:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2020-08-20T11:15:36.627-07:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wknd-spa-angular/components/image"
+                            fileReference="/content/dam/wknd/en/activities/hiking/alpinists-himalayas.jpg"/>
+                    </item_1597947281013>
+                </tabs>
             </responsivegrid>
         </root>
     </jcr:content>
