@@ -1,28 +1,27 @@
 import {AfterViewInit, ChangeDetectorRef, Component, HostBinding, Input, OnInit} from '@angular/core';
 import {AEMAllowedComponentsContainerComponent, MapTo} from '@adobe/cq-angular-editable-components';
-import {AbstractContainerComponent, ContainerIsEmptyFn} from '../AbstractContainerComponent';
 
 const CONTAINER_CLASS_NAMES = 'aem-tabs';
 
 const TabsEditConfig = {
     emptyLabel: 'Tabs',
     isEmpty: cqModel =>
-      !cqModel || !cqModel.src || cqModel.src.trim().length < 1
+      !cqModel || !cqModel.activeItem || cqModel.activeItem.trim().length < 1
   };
 
 @Component({
     selector: 'app-tabs',
     templateUrl: './tabs.component.html',
-    styleUrls: ['./tabs.component.css']
+    styleUrls: ['./tabs.component.scss']
 })
 /**
  * The current component provides the base presentational logic common to containers such as a grid or a page.
  * Container have in common the notion of item holders. Items are represented in the model by the fields _:items_ and _:itemsOrder_
  */
-export class TabsComponent extends AbstractContainerComponent implements OnInit, AfterViewInit {
+export class TabsComponent extends AEMAllowedComponentsContainerComponent implements OnInit, AfterViewInit {
 
     @HostBinding('class') class = 'cmp-tabs';
-    @HostBinding('attr.data-cq-data-path') cqPath = 'cqPath';
+    /*@HostBinding('attr.data-cq-data-path') cqPath = 'cqPath';*/
 
     activeItemName ?: string;
     @Input() activeItem?: string;
@@ -37,7 +36,7 @@ export class TabsComponent extends AbstractContainerComponent implements OnInit,
     }
 
     getTabClass(itemKey: string) {
-        return `${this.class}__tab` + ((this.isActive(itemKey) ? ` ${this.class}__tab--active` : ''));
+        return `${this.class}__tab` + (this.isActive(itemKey) ? ` ${this.class}__tab--active` : '');
     }
 
     getTabTitle(itemKey: string) {
@@ -49,6 +48,7 @@ export class TabsComponent extends AbstractContainerComponent implements OnInit,
     }
 
     onClick(itemKey: string) {
+        console.log('Item key clicked: ' + itemKey);
         this.activeItemName = itemKey;
     }
 
@@ -57,6 +57,7 @@ export class TabsComponent extends AbstractContainerComponent implements OnInit,
         if ( this.activeItem && this.activeItem.trim().length > 0 ) {
             this.activeItemName = this.activeItem;
         } else {
+            console.log('Items? ' + this.cqItemsOrder);
             this.activeItemName = this.cqItemsOrder && this.cqItemsOrder.length > 0 ? this.cqItemsOrder[0] : '';
         }
         this.changeDetectorRef.detectChanges();
@@ -74,27 +75,10 @@ export class TabsComponent extends AbstractContainerComponent implements OnInit,
         return CONTAINER_CLASS_NAMES;
     }
 
-    get activeTabItem() {
-        return this.getItem(this.activeItemName);
-    }
-
-    get activeTabItemDataPath() {
-        return this.getDataPath(this.activeItemName);
-    }
-
-    get activeTabItemName() {
-        console.log('activeItem', this.activeItemName);
-        return this.activeItemName;
-    }
-
     get hostClasses() {
         return this.getHostClassNames();
     }
 
-    get isActiveItemNameSet() {
-        return !!this.activeItemName && this.activeItemName.length > 0;
-    }
-
 }
 
-MapTo('wknd-spa-angular/components/tabs')(TabsComponent, ContainerIsEmptyFn);
+MapTo('wknd-spa-angular/components/tabs')(TabsComponent, TabsEditConfig);
