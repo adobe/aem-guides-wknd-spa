@@ -1,4 +1,4 @@
-import { Page, withModel } from '@adobe/cq-react-editable-components';
+import { Page, withModel } from '@adobe/aem-react-editable-components';
 import React from 'react';
 import Header from './components/Header/Header';
 
