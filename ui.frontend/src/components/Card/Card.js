@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Image from '../Image/Image';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 
 export const CardEditConfig = {
