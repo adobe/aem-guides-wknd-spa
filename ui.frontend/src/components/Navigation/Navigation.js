@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 import {Link} from "react-router-dom";
+
+
 require('./Navigation.scss');
 
 const NavigationEditConfig = {
@@ -32,7 +34,7 @@ export default class Navigation extends Component {
    }
 
    renderNavItem(item, index) {
-      const cssClass = this.baseCss + '__item ' + 
+      const cssClass = this.baseCss + '__item ' +
                          this.baseCss + '__item--level-' + item.level + ' ' +
                          (item.active ? ' ' + this.baseCss + '__item--active' : '');
         return (
