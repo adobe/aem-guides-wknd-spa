@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 export const CustomEditConfig = {
 
@@ -20,7 +20,7 @@ export default class Custom extends Component {
         return (
             <div class="CustomComponent">
                 <h2 class="CustomComponent__message">{this.props.message}</h2>
-            </div> 
+            </div>
         );
     }
 }
