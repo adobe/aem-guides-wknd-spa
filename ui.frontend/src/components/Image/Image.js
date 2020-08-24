@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Image.scss');
 
@@ -15,7 +15,7 @@ export const ImageEditConfig = {
 export default class Image extends Component {
 
     get content() {
-        return <img  
+        return <img
                 className="Image-src"
                 src={this.props.src}
                 alt={this.props.alt}
