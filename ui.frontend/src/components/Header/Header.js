@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import wkndLogoDark from '../../media/wknd-logo-dk.png';
 import backIcon from '../../media/icon-back.svg';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
 import Navigation from '../Navigation/Navigation';
@@ -92,7 +92,7 @@ export default class Header extends Component {
             </div>
         );
     }
-    
+
     render() {
         if(HeaderEditConfig.isEmpty(this.props)) {
             return null;

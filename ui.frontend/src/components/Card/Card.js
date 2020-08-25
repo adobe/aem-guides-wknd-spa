@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Image from '../Image/Image';
 import {Link} from "react-router-dom";
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Card.scss');
 
