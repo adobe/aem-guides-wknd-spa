@@ -68,11 +68,6 @@
                             <artifactId>wknd-spa-angular.core</artifactId>
                             <target>/apps/wknd-spa-angular/install</target>
                         </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.core</artifactId>
-                            <target>/apps/wknd-spa-angular/install</target>
-                        </embedded>
                     </embeddeds>
                     <dependencies>
                         <dependency>
