@@ -68,6 +68,11 @@
                             <artifactId>spa.project.core.ui.apps</artifactId>
                             <target>/apps/wknd-spa-angular-vendor-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem</groupId>
+                            <artifactId>spa.project.core.core</artifactId>
+                            <target>/apps/wknd-spa-angular-vendor-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
