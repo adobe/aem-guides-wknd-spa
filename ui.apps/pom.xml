@@ -68,11 +68,6 @@
                             <artifactId>wknd-spa-angular.core</artifactId>
                             <target>/apps/wknd-spa-angular/install</target>
                         </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.core</artifactId>
-                            <target>/apps/wknd-spa-angular/install</target>
-                        </embedded>
                     </embeddeds>
                     <dependencies>
                         <dependency>
@@ -233,17 +228,6 @@
                                 <embedded>
                                     <groupId>com.adobe.aem.guides</groupId>
                                     <artifactId>wknd-spa-angular.core</artifactId>
-                                    <target>/apps/wknd-spa-angular/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem</groupId>
-                                    <artifactId>spa.project.core.core</artifactId>
-                                    <target>/apps/wknd-spa-angular/install</target>
-                                </embedded>
-                                <!-- Embed Core Component dependency 6.x -->
-                                <embedded>
-                                    <groupId>com.adobe.cq</groupId>
-                                    <artifactId>core.wcm.components.core</artifactId>
                                     <target>/apps/wknd-spa-angular/install</target>
                                 </embedded>
                             </embeddeds>
