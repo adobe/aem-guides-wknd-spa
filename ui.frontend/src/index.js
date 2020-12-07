@@ -21,7 +21,7 @@ import 'react-app-polyfill/stable';
 import 'react-app-polyfill/ie9';
 import 'custom-event-polyfill';
 
-import { Constants, ModelManager } from '@adobe/aem-spa-page-model-manager';
+import {Constants, ModelManager} from '@adobe/aem-spa-page-model-manager';
 import { createBrowserHistory } from 'history';
 import React from 'react';
 import { render } from 'react-dom';
@@ -33,6 +33,25 @@ import './index.scss';
 document.addEventListener('DOMContentLoaded', () => {
   ModelManager.initialize().then(pageModel => {
     const history = createBrowserHistory();
+    // if (ModelManager.clientlibUtil.isStateActive(Constants.STATE_AUTHORING)) {
+       let markup = ModelManager.clientlibUtil.getTagsForState(Constants.STATE_AUTHORING);
+       let markupCss = ModelManager.clientlibUtil.getCssTagsForState(Constants.STATE_AUTHORING);
+      console.log(markupCss);
+      var link = document.createElement("link");
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = markupCss;
+      window.document.head.appendChild( link);
+
+      console.log(markup);
+      markup.forEach(resource => {
+          var script = document.createElement("script");
+          script.type = 'text/javascript';
+          script.src = resource;
+          window.document.head.appendChild(script);
+      });
+
+    // }
     render(
       <Router history={history}>
         <App
