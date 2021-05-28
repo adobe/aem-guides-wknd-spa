@@ -1,0 +1,21 @@
+.Header {
+    background-color: #FFEA00;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.24);
+}
+
+.Header-container {
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.Header-container h1 {
+    letter-spacing: 0;
+    font-size: 48px;
+}

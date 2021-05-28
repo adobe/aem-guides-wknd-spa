@@ -1,0 +1,285 @@
+{
+    "componentsResourceTypes": [
+        "wcm/foundation/components/responsivegrid",
+        "nt:unstructured",
+        "wknd-spa-react/components/spa"
+    ],
+    "designPath": "/libs/settings/wcm/designs/default",
+    "brandSlug": "",
+    "language": "en",
+    "title": "en",
+    "templateName": "spa-app-template",
+    "cssClassNames": "spa page basicpage",
+    ":hierarchyType": "page",
+    ":path": "/content/wknd-spa-react/us/en",
+    ":children": {
+        "/content/wknd-spa-react/us/en/home": {
+            "componentsResourceTypes": [
+                "wknd-spa-react/components/text",
+                "wcm/foundation/components/responsivegrid",
+                "nt:unstructured",
+                "wknd-spa-react/components/page"
+            ],
+            "designPath": "/libs/settings/wcm/designs/default",
+            "brandSlug": "",
+            "language": "en",
+            "title": "WKND SPA React Home Page",
+            "lastModifiedDate": 1621470926063,
+            "templateName": "spa-page-template",
+            "cssClassNames": "spa page basicpage",
+            ":hierarchyType": "page",
+            ":path": "/content/wknd-spa-react/us/en/home",
+            ":type": "wknd-spa-react/components/page",
+            ":items": {
+                "root": {
+                    "columnCount": 12,
+                    "columnClassNames": {
+                        "responsivegrid": "aem-GridColumn aem-GridColumn--default--12"
+                    },
+                    "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+                    "allowedComponents": {
+                        "applicable": false,
+                        "components": [
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wcm/foundation/components/responsivegrid",
+                                "title": "Layout Container"
+                            },
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wknd-spa-react/components/text",
+                                "title": "Text"
+                            },
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wknd-spa-react/components/navigation",
+                                "title": "Navigation"
+                            }
+                        ]
+                    },
+                    ":items": {
+                        "responsivegrid": {
+                            "columnCount": 12,
+                            "columnClassNames": {
+                                "text_1079508107": "aem-GridColumn aem-GridColumn--default--12",
+                                "text": "aem-GridColumn aem-GridColumn--default--12"
+                            },
+                            "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+                            "allowedComponents": {
+                                "applicable": false,
+                                "components": [
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/jcr:content/root/responsivegrid/wcm/foundation/components/responsivegrid",
+                                        "title": "Layout Container"
+                                    },
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/jcr:content/root/responsivegrid/wknd-spa-react/components/text",
+                                        "title": "Text"
+                                    },
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/jcr:content/root/responsivegrid/wknd-spa-react/components/navigation",
+                                        "title": "Navigation"
+                                    }
+                                ]
+                            },
+                            ":items": {
+                                "text": {
+                                    "id": "text-a647cec03a",
+                                    "text": "\u003Cp\u003EHelloxx World! Updated content!\u003C/p\u003E\r\n",
+                                    "richText": true,
+                                    ":type": "wknd-spa-react/components/text",
+                                    "dataLayer": {
+                                        "text-a647cec03a": {
+                                            "@type": "wknd-spa-react/components/text",
+                                            "repo:modifyDate": "2021-05-20T00:35:09Z",
+                                            "xdm:text": "\u003Cp\u003EHello aljdorld! Updated content!\u003C/p\u003E\r\n"
+                                        }
+                                    }
+                                },
+                                "text_1079508107": {
+                                    "id": "text-c6d58e45bb",
+                                    "text": "\u003Cp\u003EA new text component.\u003C/p\u003E\r\n",
+                                    "richText": true,
+                                    ":type": "wknd-spa-react/components/text",
+                                    "dataLayer": {
+                                        "text-c6d58e45bb": {
+                                            "@type": "wknd-spa-react/components/text",
+                                            "repo:modifyDate": "2021-05-20T00:35:26Z",
+                                            "xdm:text": "\u003Cp\u003EA new text component.\u003C/p\u003E\r\n"
+                                        }
+                                    }
+                                }
+                            },
+                            ":itemsOrder": [
+                                "text",
+                                "text_1079508107"
+                            ],
+                            ":type": "wcm/foundation/components/responsivegrid"
+                        }
+                    },
+                    ":itemsOrder": [
+                        "responsivegrid"
+                    ],
+                    ":type": "wcm/foundation/components/responsivegrid"
+                }
+            },
+            ":itemsOrder": [
+                "root"
+            ]
+        },
+        "/content/wknd-spa-react/us/en/home/page-1": {
+            "componentsResourceTypes": [
+                "wcm/foundation/components/responsivegrid",
+                "nt:unstructured",
+                "wknd-spa-react/components/page"
+            ],
+            "designPath": "/libs/settings/wcm/designs/default",
+            "brandSlug": "",
+            "language": "en",
+            "title": "Page 1",
+            "lastModifiedDate": 1621532924561,
+            "templateName": "spa-page-template",
+            "cssClassNames": "spa page basicpage",
+            ":hierarchyType": "page",
+            ":path": "/content/wknd-spa-react/us/en/home/page-1",
+            ":type": "wknd-spa-react/components/page",
+            ":items": {
+                "root": {
+                    "columnCount": 12,
+                    "columnClassNames": {
+                        "responsivegrid": "aem-GridColumn aem-GridColumn--default--12"
+                    },
+                    "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+                    "allowedComponents": {
+                        "applicable": false,
+                        "components": [
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wcm/foundation/components/responsivegrid",
+                                "title": "Layout Container"
+                            },
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wknd-spa-react/components/text",
+                                "title": "Text"
+                            },
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wknd-spa-react/components/navigation",
+                                "title": "Navigation"
+                            }
+                        ]
+                    },
+                    ":items": {
+                        "responsivegrid": {
+                            "columnCount": 12,
+                            "columnClassNames": {},
+                            "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+                            "allowedComponents": {
+                                "applicable": false,
+                                "components": [
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/page-1/jcr:content/root/responsivegrid/wcm/foundation/components/responsivegrid",
+                                        "title": "Layout Container"
+                                    },
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/page-1/jcr:content/root/responsivegrid/wknd-spa-react/components/text",
+                                        "title": "Text"
+                                    },
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/page-1/jcr:content/root/responsivegrid/wknd-spa-react/components/navigation",
+                                        "title": "Navigation"
+                                    }
+                                ]
+                            },
+                            ":items": {},
+                            ":itemsOrder": [],
+                            ":type": "wcm/foundation/components/responsivegrid"
+                        }
+                    },
+                    ":itemsOrder": [
+                        "responsivegrid"
+                    ],
+                    ":type": "wcm/foundation/components/responsivegrid"
+                }
+            },
+            ":itemsOrder": [
+                "root"
+            ]
+        },
+        "/content/wknd-spa-react/us/en/home/page-2": {
+            "componentsResourceTypes": [
+                "wcm/foundation/components/responsivegrid",
+                "nt:unstructured",
+                "wknd-spa-react/components/page"
+            ],
+            "designPath": "/libs/settings/wcm/designs/default",
+            "brandSlug": "",
+            "language": "en",
+            "title": "Page 2",
+            "lastModifiedDate": 1621532936001,
+            "templateName": "spa-page-template",
+            "cssClassNames": "spa page basicpage",
+            ":hierarchyType": "page",
+            ":path": "/content/wknd-spa-react/us/en/home/page-2",
+            ":type": "wknd-spa-react/components/page",
+            ":items": {
+                "root": {
+                    "columnCount": 12,
+                    "columnClassNames": {
+                        "responsivegrid": "aem-GridColumn aem-GridColumn--default--12"
+                    },
+                    "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+                    "allowedComponents": {
+                        "applicable": false,
+                        "components": [
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wcm/foundation/components/responsivegrid",
+                                "title": "Layout Container"
+                            },
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wknd-spa-react/components/text",
+                                "title": "Text"
+                            },
+                            {
+                                "path": "/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure/jcr:content/root/wknd-spa-react/components/navigation",
+                                "title": "Navigation"
+                            }
+                        ]
+                    },
+                    ":items": {
+                        "responsivegrid": {
+                            "columnCount": 12,
+                            "columnClassNames": {},
+                            "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+                            "allowedComponents": {
+                                "applicable": false,
+                                "components": [
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/page-2/jcr:content/root/responsivegrid/wcm/foundation/components/responsivegrid",
+                                        "title": "Layout Container"
+                                    },
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/page-2/jcr:content/root/responsivegrid/wknd-spa-react/components/text",
+                                        "title": "Text"
+                                    },
+                                    {
+                                        "path": "/content/wknd-spa-react/us/en/home/page-2/jcr:content/root/responsivegrid/wknd-spa-react/components/navigation",
+                                        "title": "Navigation"
+                                    }
+                                ]
+                            },
+                            ":items": {},
+                            ":itemsOrder": [],
+                            ":type": "wcm/foundation/components/responsivegrid"
+                        }
+                    },
+                    ":itemsOrder": [
+                        "responsivegrid"
+                    ],
+                    ":type": "wcm/foundation/components/responsivegrid"
+                }
+            },
+            ":itemsOrder": [
+                "root"
+            ]
+        }
+    },
+    ":type": "wknd-spa-react/components/spa",
+    ":items": {},
+    ":itemsOrder": []
+}
