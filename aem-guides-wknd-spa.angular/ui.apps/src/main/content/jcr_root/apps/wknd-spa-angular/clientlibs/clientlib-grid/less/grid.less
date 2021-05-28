@@ -18,6 +18,7 @@
 
 /* maximum amount of grid cells to be provided */
 @max_col: 12;
+@gutter-padding: 7px;
 
 /* default breakpoint */
 .aem-Grid {
@@ -42,3 +43,12 @@
 .aem-GridShowHidden > .cmp-container > .aem-Grid > .aem-GridColumn {
   display: block !important;
 }
+
+.aem-GridColumn {
+    padding: 0 @gutter-padding;
+}
+  
+.responsivegrid.aem-GridColumn {
+padding-left: 0;
+padding-right: 0;
+} 
