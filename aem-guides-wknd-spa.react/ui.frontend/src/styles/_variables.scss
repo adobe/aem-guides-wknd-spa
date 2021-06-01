@@ -1,0 +1,85 @@
+/*
+Copyright 2020 Adobe
+All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in
+accordance with the terms of the Adobe license agreement accompanying
+it.
+*/
+//_variables.scss
+
+//CSS Variables for easy overriding
+:root {
+    --wknd-black: #202020;
+    --wknd-gray: #696969;
+    --wknd-gray-light: #EBEBEB;
+    --wknd-gray-lighter: #F7F7F7;
+    --wknd-white: #FFFFFF;
+    --wknd-yellow: #FFEA00;
+    --wknd-blue: #0045FF;
+    --wknd-pink: #ff0048;
+
+    //typography
+    --font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-serif:       "Asar",Georgia, "Times New Roman", Times, serif;
+    --font-family-base:        var(--font-family-sans-serif);
+    --site-text-color: var(--wknd-black);
+  
+}
+//== Colors
+//
+//## Gray and brand colors for use across theme.
+
+$black:                  #202020;
+$gray:                   #696969;
+$gray-light:             #EBEBEB;
+$gray-lighter:           #F7F7F7;
+$white:                  #FFFFFF;
+$yellow:                 #FFEA00;
+$blue:                   #0045FF;
+$red:                    #ff0048;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       "Asar",Georgia, "Times New Roman", Times, serif;
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-xsmall:		  12px;
+$font-size-small:         14px;
+$font-size-medium:		  16px;
+$font-size-base:          18px;
+$font-size-large:         24px;
+$font-size-xlarge:        48px;
+
+$font-size-h1:            40px;
+$font-size-h2:            36px; 
+$font-size-h3:            24px; 
+$font-size-h4:            16px; 
+$font-size-h5:            14px;
+$font-size-h6:            10px; 
+
+$font-weight-normal:     normal;
+$font-weight-bold:       600;
+
+$line-height-base:        1.1;
+$line-height-computed:    floor(($font-size-base * $line-height-base));
+
+// Functional Colors
+$brand-primary:             $yellow;
+$body-bg:                   $white;
+$text-color:                $black;
+$text-color-inverse:        $gray-light;
+$link-color:                $blue;
+
+//Layout
+$max-width: 1024px;
+
+// Spacing
+$gutter-padding: 12px; 
+
+// Breakpoints
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;

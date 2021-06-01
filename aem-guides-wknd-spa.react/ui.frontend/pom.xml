@@ -59,6 +59,16 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>npm rebuild node-sass</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>rebuild node-sass</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>npm run build</id>
                         <phase>generate-resources</phase>
                         <goals>
