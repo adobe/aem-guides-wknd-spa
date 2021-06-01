@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/wknd-spa-react/clientlibs"/>
+    <filter root="/apps/wknd-spa-react/components"/>
+    <filter root="/apps/wknd-spa-react/i18n"/>
+</workspaceFilter>

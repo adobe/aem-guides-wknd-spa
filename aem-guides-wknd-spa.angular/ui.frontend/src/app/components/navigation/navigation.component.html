@@ -1,0 +1,14 @@
+<ul *ngIf="navigationLinks && navigationLinks.length > 0" class="navigation__group">
+    <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ links: navigationLinks }"></ng-container>
+</ul>
+
+<ng-template #recursiveListTmpl let-links="links">
+    <li *ngFor="let link of links" class="{{'navigation__item naviation__item--' + link.level}}">
+        <a [routerLink]="link.url" class="navigation__item-link" [title]="link.title" [attr.aria-current]="link.active">
+            {{link.title}}
+        </a>
+        <ul *ngIf="link.children && link.children.length > 0">
+            <ng-container *ngTemplateOutlet="recursiveListTmpl; context:{ links: link.children }"></ng-container>
+        </ul>
+    </li>
+</ng-template>

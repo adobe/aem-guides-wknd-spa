@@ -1,0 +1,10 @@
+[
+    {
+      "context": [
+        "/content/**/*.model.json"
+      ],
+      "pathRewrite": { "^/content/wknd-spa-angular/us" : "/mocks/json"} ,
+      "target": "http://localhost:4200",
+      "logLevel": "debug"
+    }
+]

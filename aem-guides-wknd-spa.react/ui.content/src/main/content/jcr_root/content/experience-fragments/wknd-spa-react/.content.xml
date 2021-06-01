@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:adobeTargetExportFormat="html"
+    cq:allowedTemplates="[/conf/wknd-spa-react/settings/wcm/templates/(?!page-).*]"
+    cq:conf="/conf/wknd-spa-react"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="WKND SPA React Fragments"
+    sling:configRef="/conf/wknd-spa-react">
+    <us/>
+</jcr:root>

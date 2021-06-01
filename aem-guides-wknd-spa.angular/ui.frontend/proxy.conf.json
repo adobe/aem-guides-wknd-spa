@@ -1,0 +1,10 @@
+[
+    {
+        "auth": "admin:admin",
+        "context": [
+                    "/content/**/*.(jpg|jpeg|png|model.json)",
+                    "/etc.clientlibs/**/*"
+                ],
+        "target": "http://localhost:4502"
+    }
+]
