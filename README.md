@@ -2,8 +2,8 @@
 
 This is the code companion for a series of tutorials designed for developers new to the **SPA Editor** feature in Adobe Experience Manager (AEM). There are two parallel versions of the tutorial:
 
-* [Create your first Angular SPA in AEM](https://docs-stg.corp.adobe.com/content/help/en/experience-manager-learn/tutorials/develop-spa-angular/overview.html)
-* [Create your first React SPA in AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/tutorials/develop-spa-react/overview.html)
+* [Create your first Angular SPA in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn_en/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+* [Create your first React SPA in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
 The starter and solution branches in this repository correspond to **Angular** and **React** versions of the tutorial.
 
