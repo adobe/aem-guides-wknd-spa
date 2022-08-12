@@ -4,7 +4,7 @@ import backIcon from "../../media/icon-back.svg";
 import { EditableComponent, MapTo } from "@adobe/aem-react-editable-components";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
-import Navigation from "../Image/Navigation/Navigation";
+import Navigation from "../Navigation/Navigation";
 
 require("./Header.scss");
 

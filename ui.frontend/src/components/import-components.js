@@ -17,7 +17,7 @@
 import './Page/Page';
 import './Text/Text';
 import './Image/Image';
-import './Image/Navigation/Navigation';
+import './Navigation/Navigation';
 import './Header/Header';
 import './Custom/Custom';
 import './Card/Card';
