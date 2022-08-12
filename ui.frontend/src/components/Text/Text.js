@@ -14,7 +14,7 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-import { MapTo } from '@adobe/aem-react-editable-components';
+import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
 import DOMPurify from 'dompurify';
 import React, { Component } from 'react';
 import extractModelId from '../../utils/extract-model-id';
@@ -59,7 +59,10 @@ class Text extends Component {
   }
 }
 
-export default MapTo('wknd-spa-react/components/text')(
-  Text,
-  TextEditConfig
-);
+const EditableText = (props) => {
+    return <EditableComponent config={TextEditConfig} {...props}>
+        <Text {...props}/>
+    </EditableComponent>
+}
+
+export default MapTo('wknd-spa-react/components/text')(EditableText);

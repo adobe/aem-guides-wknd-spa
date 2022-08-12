@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import wkndLogoDark from '../../media/wknd-logo-dk.png';
 import backIcon from '../../media/icon-back.svg';
-import {MapTo} from '@adobe/aem-react-editable-components';
+import {EditableComponent, MapTo} from '@adobe/aem-react-editable-components';
 import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
 import Navigation from '../Navigation/Navigation';
@@ -9,7 +9,6 @@ import Navigation from '../Navigation/Navigation';
 require('./Header.scss');
 
 export const HeaderEditConfig = {
-
     emptyLabel: 'Header',
 
     isEmpty: function(props) {
@@ -17,7 +16,7 @@ export const HeaderEditConfig = {
     }
 };
 
-export default class Header extends Component {
+class Header extends Component {
 
     constructor(props) {
         super(props);
@@ -113,4 +112,10 @@ export default class Header extends Component {
     }
 }
 
-MapTo('wknd-spa-react/components/header')(withRouter(Header), HeaderEditConfig);
+const EditableHeader = (props) => {
+    return <EditableComponent config={HeaderEditConfig} {...props}>
+        <Header {...props}/>
+    </EditableComponent>
+}
+
+export default MapTo('wknd-spa-react/components/header')(withRouter(EditableHeader));

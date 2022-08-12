@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/aem-react-editable-components';
+import {EditableComponent, MapTo} from '@adobe/aem-react-editable-components';
 import {Link} from "react-router-dom";
 
 
@@ -16,7 +16,7 @@ const NavigationEditConfig = {
 /**
  * Navigation Class
  */
-export default class Navigation extends Component {
+class Navigation extends Component {
 
    baseCss = 'Navigation';
 
@@ -66,4 +66,10 @@ export default class Navigation extends Component {
     }
 }
 
-MapTo("wknd-spa-react/components/navigation")(Navigation, NavigationEditConfig);
+const EditableNavigation = (props) => { 
+    return <EditableComponent config={NavigationEditConfig} {...props}>
+        <Navigation {...props}/>
+    </EditableComponent>
+}
+
+export default MapTo("wknd-spa-react/components/navigation")(EditableNavigation);

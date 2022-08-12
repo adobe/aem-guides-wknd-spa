@@ -10,7 +10,7 @@
     "sync": "aemsync -d -w ../ui.apps/src/main/content"
   },
   "dependencies": {
-    "@adobe/aem-react-editable-components": "^1.1.11",
+    "@adobe/aem-react-editable-components": "^2.0.1",
     "@adobe/aem-spa-component-mapping": "^1.1.1",
     "@adobe/aem-spa-page-model-manager": "^1.4.4",
     "custom-event-polyfill": "^1.0.7",

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/aem-react-editable-components';
+import {EditableComponent, MapTo} from '@adobe/aem-react-editable-components';
 
 export const CustomEditConfig = {
-
     emptyLabel: 'Custom',
 
     isEmpty: function(props) {
@@ -10,7 +9,7 @@ export const CustomEditConfig = {
     }
 };
 
-export default class Custom extends Component {
+class Custom extends Component {
 
     render() {
         if(CustomEditConfig.isEmpty(this.props)) {
@@ -25,4 +24,10 @@ export default class Custom extends Component {
     }
 }
 
-MapTo('wknd-spa-react/components/custom-component')(Custom, CustomEditConfig);
+const EditableCustom = (props) => {
+    return <EditableComponent config={CustomEditConfig} {...props}>
+        <Custom {...props}/>
+    </EditableComponent>
+}
+
+export default MapTo('wknd-spa-react/components/custom-component')(EditableCustom);

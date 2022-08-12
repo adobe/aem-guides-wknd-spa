@@ -1,21 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Image from '../Image/Image';
 import {Link} from "react-router-dom";
-import {MapTo} from '@adobe/aem-react-editable-components';
+import {EditableComponent, MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Card.scss');
 
 export const CardEditConfig = {
-
     emptyLabel: 'Card',
-
     isEmpty: function(props) {
         return !props || !props.src || props.src.trim().length < 1;
     }
 };
 
-export default class Card extends Component {
-
+class Card extends Component {
     get ctaButton() {
         if(this.props && this.props.ctaLinkURL && this.props.ctaText) {
             return (
@@ -72,4 +69,10 @@ export default class Card extends Component {
     }
 }
 
-MapTo('wknd-spa-react/components/card')(Card, CardEditConfig);
+const EditableCard = (props) => {
+    return <EditableComponent config={CardEditConfig} {...props}>
+        <Card {...props} />
+    </EditableComponent>
+}
+
+export default MapTo('wknd-spa-react/components/card')(EditableCard);

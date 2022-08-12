@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import {MapTo} from '@adobe/aem-react-editable-components';
+import {EditableComponent, MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Image.scss');
 
 export const ImageEditConfig = {
-
     emptyLabel: 'Image',
 
     isEmpty: function(props) {
@@ -12,7 +11,7 @@ export const ImageEditConfig = {
     }
 };
 
-export default class Image extends Component {
+class Image extends Component {
 
     get content() {
         return <img
@@ -23,6 +22,8 @@ export default class Image extends Component {
     }
 
     render() {
+        console.log(this.props);
+        
         if(ImageEditConfig.isEmpty(this.props)) {
             return null;
         }
@@ -35,4 +36,10 @@ export default class Image extends Component {
     }
 }
 
-MapTo('wknd-spa-react/components/image')(Image, ImageEditConfig);
+const EditableImage = (props) => { 
+    return <EditableComponent config={ImageEditConfig} {...props}>
+        <Image />
+    </EditableComponent>
+}
+
+export default MapTo('wknd-spa-react/components/image')(EditableImage);
