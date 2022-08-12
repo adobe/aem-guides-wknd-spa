@@ -1,121 +1,113 @@
-import React, {Component} from 'react';
-import wkndLogoDark from '../../media/wknd-logo-dk.png';
-import backIcon from '../../media/icon-back.svg';
-import {EditableComponent, MapTo} from '@adobe/aem-react-editable-components';
+import React, { useState } from "react";
+import wkndLogoDark from "../../media/wknd-logo-dk.png";
+import backIcon from "../../media/icon-back.svg";
+import { EditableComponent, MapTo } from "@adobe/aem-react-editable-components";
 import { withRouter } from "react-router";
-import {Link} from "react-router-dom";
-import Navigation from '../Navigation/Navigation';
+import { Link } from "react-router-dom";
+import Navigation from "../Image/Navigation/Navigation";
 
-require('./Header.scss');
+require("./Header.scss");
 
 export const HeaderEditConfig = {
-    emptyLabel: 'Header',
+  emptyLabel: "Header",
 
-    isEmpty: function(props) {
-        return !props || !props.items || props.items.length < 1;
-    }
+  isEmpty: function (props) {
+    return !props || !props.items || props.items.length < 1;
+  },
 };
 
-class Header extends Component {
+const Header = (props) => {
+  let [menuOpen, setMenuOpen] = useState(false);
 
-    constructor(props) {
-        super(props);
-        this.state = {isMenuOpen: false};
-        this.handleMenuClick = this.handleMenuClick.bind(this);
-        this.goBack = this.handleBackClick.bind(this);
+  const handleToggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleBackClick = () => {
+    props.history.goBack();
+  };
+
+  const renderMenuToggle = () => {
+    return (
+      <button
+        className="Menu-toggle"
+        title="Toggle Menu"
+        aria-expanded={menuOpen}
+        onClick={handleToggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    );
+  };
+
+  const homeLink = () => {
+    //expect a single root defined as part of the navigation
+    if (!props.items || props.items.length !== 1) {
+      return null;
     }
 
-    /* Update the state when the menu is clicked */
-    handleMenuClick() {
-        this.setState(state => ({
-            isMenuOpen: !state.isMenuOpen
-        }));
+    return props.items[0].url;
+  };
+
+  const renderBackButton = () => {
+    //don't show the back button on the home page
+    if (props.location.pathname === homeLink()) {
+      return null;
     }
 
-    /* Render the menu toggle */
-    get menuToggle() {
-        return (
-            <button className="Menu-toggle"  aria-expanded={this.state.isMenuOpen} title="Toggle Menu" onClick={this.handleMenuClick} >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        )
+    return (
+      <button
+        className="Backbutton"
+        aria-label="Return to previous page"
+        onClick={handleBackClick}
+      >
+        <img className="Backbutton-icon" src={backIcon} alt="Return" />
+      </button>
+    );
+  };
+
+  const renderLogo = () => {
+    let logo = <img className="Logo-img" src={wkndLogoDark} alt="WKND SPA" />;
+
+    if (homeLink()) {
+      logo = (
+        <Link className="Logo-link" to={homeLink()}>
+          {logo}
+        </Link>
+      );
     }
 
-    /* return to the previous page using react router history props */
-    handleBackClick() {
-        this.props.history.goBack();
-    }
+    return <div className="Logo">{logo}</div>;
+  };
 
-    /* Render the back button */
-    get backButton() {
-        //don't show the back button on the home page
-        if(this.props.location.pathname === this.homeLink) {
-            return null;
-        }
-        return (<button className="Backbutton" aria-label="Return to previous page" onClick={this.goBack}>
-                    <img className="Backbutton-icon" src={backIcon} alt="Return" />
-                </button>
-        );
-    }
+  if (HeaderEditConfig.isEmpty(props)) {
+    return null;
+  }
 
-    get homeLink() {
-         //expect a single root defined as part of the navigation
-        if(!this.props.items || this.props.items.length !== 1) {
-        return null;
-        }
-
-        return this.props.items[0].url;
-    }
-
-    get navigation() {
-        //pass all the props to Navigation component
-        return <Navigation {...this.props} />;
-    }
-
-    get logo() {
-        const homeLink = this.homeLink;
-        let logo;
-        if(homeLink) {
-            logo = (<Link className="Logo-link"  to={this.homeLink}>
-                        <img className="Logo-img" src={wkndLogoDark} alt="WKND SPA" />
-                    </Link>);
-        } else {
-            logo = <img className="Logo-img" src={wkndLogoDark} alt="WKND SPA" />
-        }
-
-        return (
-            <div className="Logo">
-                {logo}
-            </div>
-        );
-    }
-
-    render() {
-        if(HeaderEditConfig.isEmpty(this.props)) {
-            return null;
-        }
-
-         return (
-            <header className={this.state.isMenuOpen ? 'Header Header--menuOpen' : 'Header'}>
-                <div className="Header-container">
-                    {this.menuToggle}
-                    {this.logo}
-                    {this.backButton}
-                </div>
-                <div className="Header-navigation">
-                    {this.navigation}
-                </div>
-            </header>
-        );
-    }
-}
+  return (
+    <header className={menuOpen ? "Header Header--menuOpen" : "Header"}>
+      <div className="Header-container">
+        {renderMenuToggle()}
+        {renderLogo()}
+        {renderBackButton()}
+      </div>
+      <div className="Header-navigation">
+        <Navigation {...props} />
+      </div>
+    </header>
+  );
+};
 
 const EditableHeader = (props) => {
-    return <EditableComponent config={HeaderEditConfig} {...props}>
-        <Header {...props}/>
+  return (
+    <EditableComponent config={HeaderEditConfig} {...props}>
+      <Header {...props} />
     </EditableComponent>
-}
+  );
+};
 
-export default MapTo('wknd-spa-react/components/header')(withRouter(EditableHeader));
+export default MapTo("wknd-spa-react/components/header")(
+  withRouter(EditableHeader)
+);
