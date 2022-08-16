@@ -31,7 +31,7 @@ const Image = (props) => {
 const EditableImage = (props) => {
   return (
     <EditableComponent config={ImageEditConfig} {...props}>
-      <Image />
+      <Image {...props} />
     </EditableComponent>
   );
 };
