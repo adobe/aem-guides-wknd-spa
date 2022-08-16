@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "../Image/Image";
+// Import the "not-EditableImage" Image component, since this will be embedded within the context of the EditableCard component
+import { Image } from "../Image/Image";
 import { Link } from "react-router-dom";
 import { EditableComponent, MapTo } from "@adobe/aem-react-editable-components";
 
@@ -9,7 +10,7 @@ export const CardEditConfig = {
   emptyLabel: "Card",
   isEmpty: function (props) {
     return !props || !props.src || props.src.trim().length < 1;
-  },
+  }
 };
 
 const Card = (props) => {
@@ -45,6 +46,7 @@ const Card = (props) => {
   const imageContent = () => {
     return (
       <div className="Card__image">
+        // This is embedding the "non-editable Image" component, as the EditableCard provides the edit chrome for this entire component, including the embedded image
         <Image {...props} />
       </div>
     );

@@ -11,7 +11,11 @@ export const ImageEditConfig = {
   },
 };
 
-const Image = (props) => {
+/**
+ * Export the non-EditableImage object, so this can be embedded in ../Card/Card.js 
+ * and not supersede the Card's edit chrome.
+ */
+export const Image = (props) => {
   if (ImageEditConfig.isEmpty(props)) {
     return null;
   }
@@ -31,7 +35,7 @@ const Image = (props) => {
 const EditableImage = (props) => {
   return (
     <EditableComponent config={ImageEditConfig} {...props}>
-      <Image />
+      <Image {...props} />
     </EditableComponent>
   );
 };
