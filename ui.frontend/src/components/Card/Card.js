@@ -46,7 +46,7 @@ const Card = (props) => {
   const imageContent = () => {
     return (
       <div className="Card__image">
-        // This is embedding the "non-editable Image" component, as the EditableCard provides the edit chrome for this entire component, including the embedded image
+        {/*  This is embedding the "non-editable Image" component, as the EditableCard provides the edit chrome for this entire component, including the embedded image */}
         <Image {...props} />
       </div>
     );
