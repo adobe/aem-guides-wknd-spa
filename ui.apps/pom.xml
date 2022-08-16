@@ -155,19 +155,7 @@
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.core</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.content</artifactId>
-            <type>zip</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.config</artifactId>
-            <type>zip</type>
-        </dependency>
-
+        
         <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-sdk-api</artifactId>
@@ -229,38 +217,6 @@
                                     <artifactId>wknd-spa-react.ui.apps.structure</artifactId>
                                 </repositoryStructurePackage>
                             </repositoryStructurePackages>
-                            <embeddeds>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>wknd-spa-react.core</artifactId>
-                                    <target>/apps/wknd-spa-react/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem</groupId>
-                                    <artifactId>spa.project.core.core</artifactId>
-                                    <target>/apps/wknd-spa-react/install</target>
-                                </embedded>
-                                <!-- Embed Core Component dependency 6.x -->
-                                <embedded>
-                                    <groupId>com.adobe.cq</groupId>
-                                    <artifactId>core.wcm.components.core</artifactId>
-                                    <target>/apps/wknd-spa-react/install</target>
-                                </embedded>
-                            </embeddeds>
-                            <dependencies>
-                                <dependency>
-                                    <groupId>com.adobe.cq</groupId>
-                                    <artifactId>core.wcm.components.content</artifactId>
-                                </dependency>
-                                <dependency>
-                                    <groupId>com.adobe.cq</groupId>
-                                    <artifactId>core.wcm.components.config</artifactId>
-                                </dependency>
-                                <dependency>
-                                    <groupId>com.adobe.aem</groupId>
-                                    <artifactId>spa.project.core.ui.apps</artifactId>
-                                </dependency>
-                            </dependencies>
                     </configuration>
                     </plugin>
                 </plugins>

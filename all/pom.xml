@@ -53,6 +53,12 @@
                     <embeddeds>
                         <embedded>
                             <groupId>com.adobe.aem.guides</groupId>
+                            <artifactId>wknd-spa-react.ui.core</artifactId>
+                            <type>jar</type>
+                            <target>/apps/wknd-spa-react-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>wknd-spa-react.ui.apps</artifactId>
                             <type>zip</type>
                             <target>/apps/wknd-spa-react-packages/application/install</target>
@@ -68,6 +74,11 @@
                             <artifactId>spa.project.core.ui.apps</artifactId>
                             <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem</groupId>
+                            <artifactId>spa.project.core.ui.core</artifactId>
+                            <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
+                        </embedded>                        
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -169,6 +180,12 @@
                         <embeddeds>
                             <embedded>
                                 <groupId>com.adobe.aem.guides</groupId>
+                                <artifactId>wknd-spa-react.ui.core</artifactId>
+                                <type>jar</type>
+                                <target>/apps/wknd-spa-react-packages/application/install</target>
+                            </embedded>
+                            <embedded>
+                                <groupId>com.adobe.aem.guides</groupId>
                                 <artifactId>wknd-spa-react.ui.apps</artifactId>
                                 <type>zip</type>
                                 <target>/apps/wknd-spa-react-packages/application/install</target>
@@ -185,16 +202,15 @@
                                 <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
                             </embedded>
                             <embedded>
-                                <groupId>com.adobe.cq</groupId>
-                                <artifactId>core.wcm.components.content</artifactId>
-                                <type>zip</type>
+                                <groupId>com.adobe.aem</groupId>
+                                <artifactId>spa.project.core.ui.core</artifactId>
                                 <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
                             </embedded>
                             <embedded>
                                 <groupId>com.adobe.cq</groupId>
-                                <artifactId>core.wcm.components.config</artifactId>
+                                <artifactId>core.wcm.components.all</artifactId>
                                 <type>zip</type>
-                                <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
+                                <target>/apps/wknd-spa-react-vendor-packages/container/install</target>
                             </embedded>
                         </embeddeds>
                     </configuration>
@@ -234,12 +250,7 @@
         <!-- Core Component Dependency (6.x only)-->
         <dependency>
             <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.content</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.config</artifactId>
+            <artifactId>core.wcm.components.all</artifactId>
             <type>zip</type>
         </dependency>
     </dependencies>
