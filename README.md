@@ -9,14 +9,6 @@ This is the code companion for a series of tutorials designed for developers new
 
 If you just want to build the **finished** version of each project:
 
-#### Angular
-
-```shell
-$ git clone git@github.com:adobe/aem-guides-wknd-spa.git
-$ cd aem-guides-wknd-spa
-$ git checkout Angular/latest
-$ mvn clean install -PautoInstallSinglePackage
-```
 
 #### React
 
@@ -33,16 +25,6 @@ Or download and install the compiled [AEM Packages from the latest release](http
 
 The starter and solution branches in this repository correspond to **Angular** and **React** versions of the tutorial.
 
-### Angular Tutorials
-
-| Tutorial | Starter Code | Solution |
-|----------|--------------|----------|
-| [SPA Editor Project](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/create-project.html) | [Angular/create-project-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/create-project-start) | [Angular/create-project-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/create-project-solution) |
-| [Integrate the SPA](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/integrate-spa.html) | [Angular/integrate-spa-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-start) | [Angular/integrate-spa-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution) |
-| [Map SPA Components](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/map-components.html) | [Angular/map-components-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-start) | [Angular/map-components-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) |
-| [Navigation and routing](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/navigation-routing.html) | [Angular/navigation-routing-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-start) | [Angular/navigation-routing-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution) |
-| [Custom component](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/custom-component.html) | [Angular/custom-component-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/custom-component-start) | [Angular/custom-component-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/custom-component-solution) |
-| [Extend component](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/extend-component.html) | [Angular/extend-component-start](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-start) | [Angular/extend-component-solution](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) |
 
 ### React Tutorials
 
