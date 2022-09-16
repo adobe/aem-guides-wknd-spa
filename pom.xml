@@ -45,11 +45,11 @@
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
         <core.wcm.components.version>2.9.0</core.wcm.components.version>
-        <bnd.version>5.0.0</bnd.version>
+        <bnd.version>6.3.1</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spa.project.core.version>1.0.10</spa.project.core.version>
-        <aem.sdk.api>2020.6.3614.20200604T023048Z-200507</aem.sdk.api>
+        <spa.project.core.version>1.0.6</spa.project.core.version>
+        <aem.sdk.api>[2022.9,)</aem.sdk.api>
         <!--
           Environment for the NPM build. Possible values:
           - "" in development (=> `npm run build`)
@@ -121,8 +121,8 @@
                     <artifactId>frontend-maven-plugin</artifactId>
                     <version>1.7.6</version>
                     <configuration>
-                        <nodeVersion>v13.7.0</nodeVersion>
-                        <npmVersion>6.13.0</npmVersion>
+                        <nodeVersion>v14.20.0</nodeVersion>
+                        <npmVersion>6.14.17</npmVersion>
                     </configuration>
                     <executions>
                         <execution>
