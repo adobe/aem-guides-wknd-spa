@@ -1,0 +1,29 @@
+@import "~src/styles/variables";
+
+$link-color: $black;
+$link-hover-color: $white;
+$link-background: $black;
+
+:host-context {
+    display: block;
+    width: 100%;
+}
+
+.navigation__item {
+    list-style: none;
+}
+
+.navigation__item-link {
+    color: $link-color;
+    font-size: $font-size-large;
+    text-transform: uppercase;
+    padding: $gutter-padding;
+    display: flex;
+    border-bottom: 1px solid $gray;
+
+    &:hover {
+        background: $link-background;
+        color: $link-hover-color;
+    }
+
+}

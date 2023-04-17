@@ -1,0 +1,101 @@
+/*
+Copyright 2020 Adobe
+All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file in
+accordance with the terms of the Adobe license agreement accompanying
+it.
+*/
+/* Normalize */
+@import '~normalize-scss/sass/normalize';
+@import './styles/variables.scss';
+@import './styles/webfonts';
+
+body {
+    background-color: $body-bg;
+    font-family: $font-family-base;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-base;
+    text-align: left;
+    color: $text-color;
+    line-height: $line-height-base;
+    -webkit-font-smoothing: antialiased;
+}
+
+//spacing for header
+body.page {
+    padding-top: 75px;
+}
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+line-height: $line-height-base;
+color: $text-color;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+font-family: $font-family-serif;
+font-weight: $font-weight-normal;
+margin-top: $line-height-computed;
+margin-bottom: ($line-height-computed / 2);
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+font-family: $font-family-sans-serif;
+text-transform: uppercase;
+font-weight: $font-weight-bold;
+}
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+h1 a, h2 a, h3 a {
+    color: $text-color;
+}
+
+h1 u, h2 u, h3 u {
+    text-decoration: none;
+    border-bottom: 1px #ededed solid;
+}
+
+// Body text
+// -------------------------
+
+p {
+margin: 0 0 ($line-height-computed / 2);
+font-size: $font-size-base;
+line-height: $line-height-base + 0.75;
+text-align: justify;
+}
+
+
+ul {
+    list-style-position: inside;
+}
+
+ol, ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid $gray-light;
+}
